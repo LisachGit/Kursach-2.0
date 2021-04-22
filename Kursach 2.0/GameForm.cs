@@ -137,7 +137,7 @@ namespace Kursach_2._0
 
         public void GameProcesslvl1num10training()
         {
-
+            ResultForm resultFormOnGameForm = new ResultForm();
             ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
 
             do
@@ -188,6 +188,9 @@ namespace Kursach_2._0
             if (i == numer)
             {
                 MessageBox.Show("Игра окончена!");
+                resultFormOnGameForm.scoreoonResultForm = score;
+                resultFormOnGameForm.numerOnResultForm = numer;
+                resultFormOnGameForm.Show();
                 this.Close();
 
             }

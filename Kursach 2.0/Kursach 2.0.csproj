@@ -52,6 +52,12 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultForm.Designer.cs">
+      <DependentUpon>ResultForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ResultForm.resx">
+      <DependentUpon>ResultForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
