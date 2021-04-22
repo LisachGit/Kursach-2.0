@@ -29,6 +29,7 @@ namespace Kursach_2._0
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,6 +53,8 @@ namespace Kursach_2._0
             this.StartButtonOnMainForm = new System.Windows.Forms.Button();
             this.AboutIconOnMainForm = new System.Windows.Forms.Label();
             this.ExitIconOnMainForm = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,6 +72,8 @@ namespace Kursach_2._0
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // pictureBox2
             // 
@@ -79,6 +84,8 @@ namespace Kursach_2._0
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
             // 
             // pictureBox3
             // 
@@ -90,6 +97,8 @@ namespace Kursach_2._0
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
             // 
             // WelcomeLabelOnMainForm
             // 
@@ -110,6 +119,7 @@ namespace Kursach_2._0
             this.ChooseDifficultyLevelOnMainForm.Size = new System.Drawing.Size(240, 20);
             this.ChooseDifficultyLevelOnMainForm.TabIndex = 15;
             this.ChooseDifficultyLevelOnMainForm.Text = "Выберите уровень сложности:";
+            this.ChooseDifficultyLevelOnMainForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ChooseDifficultyLevelOnMainForm_MouseMove);
             // 
             // ChooseTypeOnMainForm
             // 
@@ -272,6 +282,7 @@ namespace Kursach_2._0
             this.GoBackButtonOnMainForm.TabIndex = 23;
             this.GoBackButtonOnMainForm.Text = "Назад на экран приветствия";
             this.GoBackButtonOnMainForm.UseVisualStyleBackColor = true;
+            this.GoBackButtonOnMainForm.Click += new System.EventHandler(this.GoBackButtonOnMainForm_Click);
             // 
             // StartButtonOnMainForm
             // 
@@ -282,6 +293,7 @@ namespace Kursach_2._0
             this.StartButtonOnMainForm.TabIndex = 24;
             this.StartButtonOnMainForm.Text = "LESSS GOO";
             this.StartButtonOnMainForm.UseVisualStyleBackColor = true;
+            this.StartButtonOnMainForm.Click += new System.EventHandler(this.StartButtonOnMainForm_Click);
             // 
             // AboutIconOnMainForm
             // 
@@ -292,6 +304,9 @@ namespace Kursach_2._0
             this.AboutIconOnMainForm.Size = new System.Drawing.Size(18, 20);
             this.AboutIconOnMainForm.TabIndex = 25;
             this.AboutIconOnMainForm.Text = "?";
+            this.AboutIconOnMainForm.Click += new System.EventHandler(this.AboutIconOnMainForm_Click);
+            this.AboutIconOnMainForm.MouseLeave += new System.EventHandler(this.AboutIconOnMainForm_MouseLeave);
+            this.AboutIconOnMainForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AboutIconOnMainForm_MouseMove);
             // 
             // ExitIconOnMainForm
             // 
@@ -302,6 +317,9 @@ namespace Kursach_2._0
             this.ExitIconOnMainForm.Size = new System.Drawing.Size(20, 20);
             this.ExitIconOnMainForm.TabIndex = 26;
             this.ExitIconOnMainForm.Text = "X";
+            this.ExitIconOnMainForm.Click += new System.EventHandler(this.ExitIconOnMainForm_Click);
+            this.ExitIconOnMainForm.MouseLeave += new System.EventHandler(this.ExitIconOnMainForm_MouseLeave);
+            this.ExitIconOnMainForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ExitIconOnMainForm_MouseMove);
             // 
             // MainForm
             // 
@@ -364,5 +382,7 @@ namespace Kursach_2._0
         private System.Windows.Forms.Button StartButtonOnMainForm;
         private System.Windows.Forms.Label AboutIconOnMainForm;
         private System.Windows.Forms.Label ExitIconOnMainForm;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
