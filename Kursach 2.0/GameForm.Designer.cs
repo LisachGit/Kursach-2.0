@@ -256,6 +256,11 @@ namespace Kursach_2._0
             this.GoBackButtonOnGameForm.UseVisualStyleBackColor = true;
             this.GoBackButtonOnGameForm.Click += new System.EventHandler(this.GoBackButtonOnGameForm_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

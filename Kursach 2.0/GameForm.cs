@@ -18,7 +18,7 @@ namespace Kursach_2._0
         Random rndongameform = new Random();
         Point lastPoint;
         public string answer, answerbox;
-        public int numer, lvl, gamemode, point, score = 0, time, example, operation;
+        public int numer, lvl, gamemode, point, score = 0, time, example, operation,timerstart = 0, m, s;
 
         private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
         {
@@ -84,6 +84,11 @@ namespace Kursach_2._0
             lastPoint = new Point(e.X, e.Y);
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -95,24 +100,28 @@ namespace Kursach_2._0
 
         private void StartTheActionButtonOnGameForm_Click(object sender, EventArgs e)
         {
-            conditionwrite();
-            ScoreNameLabelOnGameForm.Visible = true;
-            ScoreCountLabelOnGameForm.Visible = true;
-            schetchikOnGameForm.Visible = true;
-            num1labelOnGameForm.Visible = true;
-            num2labelOnGameForm.Visible = true;
-            operationlabelOnGameForm.Visible = true;
-            AnswerLabelNameOnGameForm.Visible = true;
-            AnswerBoxOnGameForm.Visible = true;
-            AnswerButtonOnGameForm.Visible = true;
-            TimeCountLabelOnGameForm.Visible = true;
-            TimeLabelOnMainForm.Visible = true;
-            StartTheActionButtonOnGameForm.Visible = false;
+            if (gamemode == 2)
+            {
+                conditionwritetrainingmode();
+                ScoreNameLabelOnGameForm.Visible = true;
+                ScoreCountLabelOnGameForm.Visible = true;
+                schetchikOnGameForm.Visible = true;
+                num1labelOnGameForm.Visible = true;
+                num2labelOnGameForm.Visible = true;
+                operationlabelOnGameForm.Visible = true;
+                AnswerLabelNameOnGameForm.Visible = true;
+                AnswerBoxOnGameForm.Visible = true;
+                AnswerButtonOnGameForm.Visible = true;
+                TimeCountLabelOnGameForm.Visible = false;
+                TimeLabelOnMainForm.Visible = false;
+                StartTheActionButtonOnGameForm.Visible = false;
+            }
         }
         private void GoBackButtonOnGameForm_Click(object sender, EventArgs e)
         {
             MainForm mainFormOnGameForm = new MainForm();
             mainFormOnGameForm.Show();
+            this.Close();
         }
 
         public int x, y, z, x1, y1, i = 0;
@@ -123,7 +132,19 @@ namespace Kursach_2._0
         }
         
 
-        public void conditionwrite()
+        public void conditionwritetrainingmode()
+        {
+            schetchikOnGameForm.Text = ("Номер примера - " + i);
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+            x1 = rndongameform.Next(10, 20);
+            y1 = rndongameform.Next(10);
+            operation = rndongameform.Next(2); // 1 это плюс, 0 это минус
+            num1labelOnGameForm.Text = Convert.ToString(x1);
+            num2labelOnGameForm.Text = Convert.ToString(y1);
+            if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-";
+        }
+
+        public void conditionwritetimemode()
         {
             schetchikOnGameForm.Text = ("Номер примера - " + i);
             ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
@@ -161,7 +182,7 @@ namespace Kursach_2._0
                         i++;
 
                         schetchikOnGameForm.Text = ("Номер примера - " + i);
-                        conditionwrite();
+                        conditionwritetrainingmode();
                     }
                     else if (operation == 0)
                     {
@@ -180,7 +201,7 @@ namespace Kursach_2._0
                         i++;
 
                         schetchikOnGameForm.Text = ("Номер примера - " + i);
-                        conditionwrite();
+                        conditionwritetrainingmode();
                     }
                 }
 
@@ -190,6 +211,69 @@ namespace Kursach_2._0
                 MessageBox.Show("Игра окончена!");
                 resultFormOnGameForm.scoreoonResultForm = score;
                 resultFormOnGameForm.numerOnResultForm = numer;
+                resultFormOnGameForm.operationnumber = operation;
+                resultFormOnGameForm.Show();
+                this.Close();
+
+            }
+        }
+
+        public void GameProcesslvl1num10time()
+        {
+            ResultForm resultFormOnGameForm = new ResultForm();
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+
+            do
+            {
+                {
+
+
+                    if (operation == 1)
+                    {
+                        z = x1 + y1;
+                        answer = Convert.ToString(z);
+
+                        if (answerbox == answer)
+                        {
+                            point = 1;
+                        }
+                        else point = 0;
+                        score = score + point;
+                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+                        AnswerBoxOnGameForm.Text = "";
+                        i++;
+
+                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        conditionwritetrainingmode();
+                    }
+                    else if (operation == 0)
+                    {
+
+                        z = x1 - y1;
+                        answer = Convert.ToString(z);
+
+                        if (answerbox == answer)
+                        {
+                            point = 1;
+                        }
+                        else point = 0;
+                        score = score + point;
+                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+                        AnswerBoxOnGameForm.Text = "";
+                        i++;
+
+                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        conditionwritetrainingmode();
+                    }
+                }
+
+            } while (i > numer);
+            if (i == numer)
+            {
+                MessageBox.Show("Игра окончена!");
+                resultFormOnGameForm.scoreoonResultForm = score;
+                resultFormOnGameForm.numerOnResultForm = numer;
+                resultFormOnGameForm.operationnumber = operation;
                 resultFormOnGameForm.Show();
                 this.Close();
 

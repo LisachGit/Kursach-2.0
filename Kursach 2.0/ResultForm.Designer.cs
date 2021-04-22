@@ -35,8 +35,8 @@ namespace Kursach_2._0
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ResultScoreLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ToMainMenuButtonOnResultForm = new System.Windows.Forms.Button();
+            this.AgainButtonOnResultForm = new System.Windows.Forms.Button();
             this.MarkLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -107,25 +107,27 @@ namespace Kursach_2._0
             this.ResultScoreLabel.TabIndex = 21;
             this.ResultScoreLabel.Text = "label1";
             // 
-            // button1
+            // ToMainMenuButtonOnResultForm
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(126, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 47);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "В главное меню";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ToMainMenuButtonOnResultForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ToMainMenuButtonOnResultForm.Location = new System.Drawing.Point(126, 403);
+            this.ToMainMenuButtonOnResultForm.Name = "ToMainMenuButtonOnResultForm";
+            this.ToMainMenuButtonOnResultForm.Size = new System.Drawing.Size(172, 47);
+            this.ToMainMenuButtonOnResultForm.TabIndex = 22;
+            this.ToMainMenuButtonOnResultForm.Text = "В главное меню";
+            this.ToMainMenuButtonOnResultForm.UseVisualStyleBackColor = true;
+            this.ToMainMenuButtonOnResultForm.Click += new System.EventHandler(this.ToMainMenuButtonOnResultForm_Click);
             // 
-            // button2
+            // AgainButtonOnResultForm
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(480, 404);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 47);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Щэ разочек";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AgainButtonOnResultForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AgainButtonOnResultForm.Location = new System.Drawing.Point(480, 404);
+            this.AgainButtonOnResultForm.Name = "AgainButtonOnResultForm";
+            this.AgainButtonOnResultForm.Size = new System.Drawing.Size(172, 47);
+            this.AgainButtonOnResultForm.TabIndex = 23;
+            this.AgainButtonOnResultForm.Text = "Щэ разочек";
+            this.AgainButtonOnResultForm.UseVisualStyleBackColor = true;
+            this.AgainButtonOnResultForm.Click += new System.EventHandler(this.AgainButtonOnResultForm_Click);
             // 
             // MarkLabel
             // 
@@ -143,8 +145,8 @@ namespace Kursach_2._0
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MarkLabel);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AgainButtonOnResultForm);
+            this.Controls.Add(this.ToMainMenuButtonOnResultForm);
             this.Controls.Add(this.ResultScoreLabel);
             this.Controls.Add(this.EndGameLabelOnResultLabel);
             this.Controls.Add(this.ExitIconOnResutForm);
@@ -171,8 +173,8 @@ namespace Kursach_2._0
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label ResultScoreLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ToMainMenuButtonOnResultForm;
+        private System.Windows.Forms.Button AgainButtonOnResultForm;
         private System.Windows.Forms.Label MarkLabel;
     }
 }
