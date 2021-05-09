@@ -36,8 +36,8 @@ namespace Kursach_2._0
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ResultScoreLabel = new System.Windows.Forms.Label();
             this.ToMainMenuButtonOnResultForm = new System.Windows.Forms.Button();
-            this.AgainButtonOnResultForm = new System.Windows.Forms.Button();
             this.MarkLabel = new System.Windows.Forms.Label();
+            this.elapsedTimeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -110,24 +110,13 @@ namespace Kursach_2._0
             // ToMainMenuButtonOnResultForm
             // 
             this.ToMainMenuButtonOnResultForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToMainMenuButtonOnResultForm.Location = new System.Drawing.Point(126, 403);
+            this.ToMainMenuButtonOnResultForm.Location = new System.Drawing.Point(308, 404);
             this.ToMainMenuButtonOnResultForm.Name = "ToMainMenuButtonOnResultForm";
             this.ToMainMenuButtonOnResultForm.Size = new System.Drawing.Size(172, 47);
             this.ToMainMenuButtonOnResultForm.TabIndex = 22;
             this.ToMainMenuButtonOnResultForm.Text = "В главное меню";
             this.ToMainMenuButtonOnResultForm.UseVisualStyleBackColor = true;
             this.ToMainMenuButtonOnResultForm.Click += new System.EventHandler(this.ToMainMenuButtonOnResultForm_Click);
-            // 
-            // AgainButtonOnResultForm
-            // 
-            this.AgainButtonOnResultForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AgainButtonOnResultForm.Location = new System.Drawing.Point(480, 404);
-            this.AgainButtonOnResultForm.Name = "AgainButtonOnResultForm";
-            this.AgainButtonOnResultForm.Size = new System.Drawing.Size(172, 47);
-            this.AgainButtonOnResultForm.TabIndex = 23;
-            this.AgainButtonOnResultForm.Text = "Щэ разочек";
-            this.AgainButtonOnResultForm.UseVisualStyleBackColor = true;
-            this.AgainButtonOnResultForm.Click += new System.EventHandler(this.AgainButtonOnResultForm_Click);
             // 
             // MarkLabel
             // 
@@ -139,13 +128,24 @@ namespace Kursach_2._0
             this.MarkLabel.TabIndex = 24;
             this.MarkLabel.Text = "label1";
             // 
+            // elapsedTimeLabel
+            // 
+            this.elapsedTimeLabel.AutoSize = true;
+            this.elapsedTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.elapsedTimeLabel.Location = new System.Drawing.Point(40, 238);
+            this.elapsedTimeLabel.Name = "elapsedTimeLabel";
+            this.elapsedTimeLabel.Size = new System.Drawing.Size(57, 20);
+            this.elapsedTimeLabel.TabIndex = 25;
+            this.elapsedTimeLabel.Text = "label1";
+            this.elapsedTimeLabel.Visible = false;
+            // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.elapsedTimeLabel);
             this.Controls.Add(this.MarkLabel);
-            this.Controls.Add(this.AgainButtonOnResultForm);
             this.Controls.Add(this.ToMainMenuButtonOnResultForm);
             this.Controls.Add(this.ResultScoreLabel);
             this.Controls.Add(this.EndGameLabelOnResultLabel);
@@ -174,7 +174,7 @@ namespace Kursach_2._0
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label ResultScoreLabel;
         private System.Windows.Forms.Button ToMainMenuButtonOnResultForm;
-        private System.Windows.Forms.Button AgainButtonOnResultForm;
         private System.Windows.Forms.Label MarkLabel;
+        private System.Windows.Forms.Label elapsedTimeLabel;
     }
 }

@@ -203,7 +203,7 @@ namespace Kursach_2._0
             this.TypeGroup.Controls.Add(this.time_mode);
             this.TypeGroup.Location = new System.Drawing.Point(304, 114);
             this.TypeGroup.Name = "TypeGroup";
-            this.TypeGroup.Size = new System.Drawing.Size(200, 63);
+            this.TypeGroup.Size = new System.Drawing.Size(200, 75);
             this.TypeGroup.TabIndex = 21;
             this.TypeGroup.TabStop = false;
             // 

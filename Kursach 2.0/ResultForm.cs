@@ -17,17 +17,23 @@ namespace Kursach_2._0
             InitializeComponent();
         }
         public double scoreoonResultForm, numerOnResultForm, persent;
-        public int operationnumber;
+        public int gamemodenumber, elspasedTimeMinutes, elapsedTimeSeconds;
 
         private void ResultForm_Shown(object sender, EventArgs e)
         {
             persent = (scoreoonResultForm / numerOnResultForm) * 100;
             ResultScoreLabel.Text = "Вы ответили на " + Convert.ToString(persent) + "% правильно!";
             if (persent < 20) MarkLabel.Text = "Ваш уровень знания устного счёта: Низкий";
-            else if (persent > 20 && persent < 40) MarkLabel.Text = "Ваш уровень знания устного счёта: Ниже среднего";
-            else if (persent > 40 && persent < 60) MarkLabel.Text = "Ваш уровень знания устного счёта: Средний";
-            else if (persent > 60 && persent < 80) MarkLabel.Text = "Ваш уровень знания устного счёта: Выше среднего";
+            else if (persent > 20 && persent <= 40) MarkLabel.Text = "Ваш уровень знания устного счёта: Ниже среднего";
+            else if (persent > 40 && persent <= 60) MarkLabel.Text = "Ваш уровень знания устного счёта: Средний";
+            else if (persent > 60 && persent <= 80) MarkLabel.Text = "Ваш уровень знания устного счёта: Выше среднего";
             else if (persent > 80) MarkLabel.Text = "Ваш уровень знания устного счёта: Высокий";
+            if (gamemodenumber == 1)
+            {
+                elapsedTimeLabel.Visible = true;
+                elapsedTimeLabel.Text = "Затраченное время: " + elspasedTimeMinutes + " минут " + elapsedTimeSeconds + " секунд.";
+            }
+
         }
 
         private void ExitIconOnResutForm_Click(object sender, EventArgs e)
@@ -42,12 +48,6 @@ namespace Kursach_2._0
             this.Close();
         }
 
-        private void AgainButtonOnResultForm_Click(object sender, EventArgs e)
-        {
-            GameForm gameForm = new GameForm();
-            gameForm.Show();
-            this.Close();
-        }
 
         private void ExitIconOnResutForm_MouseMove(object sender, MouseEventArgs e)
         {

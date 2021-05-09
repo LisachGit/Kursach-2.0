@@ -46,9 +46,10 @@ namespace Kursach_2._0
             this.ScoreNameLabelOnGameForm = new System.Windows.Forms.Label();
             this.ScoreCountLabelOnGameForm = new System.Windows.Forms.Label();
             this.TimeLabelOnMainForm = new System.Windows.Forms.Label();
-            this.TimeCountLabelOnGameForm = new System.Windows.Forms.Label();
+            this.TimeCountMinutesLabelOnGameForm = new System.Windows.Forms.Label();
             this.GoBackButtonOnGameForm = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.TimeCountSecondsLabelOnGameForm = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -234,16 +235,16 @@ namespace Kursach_2._0
             this.TimeLabelOnMainForm.Text = "Время";
             this.TimeLabelOnMainForm.Visible = false;
             // 
-            // TimeCountLabelOnGameForm
+            // TimeCountMinutesLabelOnGameForm
             // 
-            this.TimeCountLabelOnGameForm.AutoSize = true;
-            this.TimeCountLabelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TimeCountLabelOnGameForm.Location = new System.Drawing.Point(689, 114);
-            this.TimeCountLabelOnGameForm.Name = "TimeCountLabelOnGameForm";
-            this.TimeCountLabelOnGameForm.Size = new System.Drawing.Size(67, 24);
-            this.TimeCountLabelOnGameForm.TabIndex = 39;
-            this.TimeCountLabelOnGameForm.Text = "Время";
-            this.TimeCountLabelOnGameForm.Visible = false;
+            this.TimeCountMinutesLabelOnGameForm.AutoSize = true;
+            this.TimeCountMinutesLabelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeCountMinutesLabelOnGameForm.Location = new System.Drawing.Point(689, 114);
+            this.TimeCountMinutesLabelOnGameForm.Name = "TimeCountMinutesLabelOnGameForm";
+            this.TimeCountMinutesLabelOnGameForm.Size = new System.Drawing.Size(30, 24);
+            this.TimeCountMinutesLabelOnGameForm.TabIndex = 39;
+            this.TimeCountMinutesLabelOnGameForm.Text = "00";
+            this.TimeCountMinutesLabelOnGameForm.Visible = false;
             // 
             // GoBackButtonOnGameForm
             // 
@@ -261,13 +262,25 @@ namespace Kursach_2._0
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // TimeCountSecondsLabelOnGameForm
+            // 
+            this.TimeCountSecondsLabelOnGameForm.AutoSize = true;
+            this.TimeCountSecondsLabelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeCountSecondsLabelOnGameForm.Location = new System.Drawing.Point(725, 114);
+            this.TimeCountSecondsLabelOnGameForm.Name = "TimeCountSecondsLabelOnGameForm";
+            this.TimeCountSecondsLabelOnGameForm.Size = new System.Drawing.Size(30, 24);
+            this.TimeCountSecondsLabelOnGameForm.TabIndex = 41;
+            this.TimeCountSecondsLabelOnGameForm.Text = "00";
+            this.TimeCountSecondsLabelOnGameForm.Visible = false;
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TimeCountSecondsLabelOnGameForm);
             this.Controls.Add(this.GoBackButtonOnGameForm);
-            this.Controls.Add(this.TimeCountLabelOnGameForm);
+            this.Controls.Add(this.TimeCountMinutesLabelOnGameForm);
             this.Controls.Add(this.TimeLabelOnMainForm);
             this.Controls.Add(this.ScoreCountLabelOnGameForm);
             this.Controls.Add(this.ScoreNameLabelOnGameForm);
@@ -314,8 +327,9 @@ namespace Kursach_2._0
         private System.Windows.Forms.Label ScoreNameLabelOnGameForm;
         public System.Windows.Forms.Label ScoreCountLabelOnGameForm;
         private System.Windows.Forms.Label TimeLabelOnMainForm;
-        private System.Windows.Forms.Label TimeCountLabelOnGameForm;
+        private System.Windows.Forms.Label TimeCountMinutesLabelOnGameForm;
         private System.Windows.Forms.Button GoBackButtonOnGameForm;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label TimeCountSecondsLabelOnGameForm;
     }
 }
