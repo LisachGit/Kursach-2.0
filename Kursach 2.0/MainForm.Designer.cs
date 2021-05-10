@@ -41,7 +41,6 @@ namespace Kursach_2._0
             this.lvl1 = new System.Windows.Forms.RadioButton();
             this.lvl2 = new System.Windows.Forms.RadioButton();
             this.lvl3 = new System.Windows.Forms.RadioButton();
-            this.randomlvl = new System.Windows.Forms.RadioButton();
             this.TypeGroup = new System.Windows.Forms.GroupBox();
             this.training_mode = new System.Windows.Forms.RadioButton();
             this.time_mode = new System.Windows.Forms.RadioButton();
@@ -146,7 +145,6 @@ namespace Kursach_2._0
             this.DifficultyLevelGroup.Controls.Add(this.lvl1);
             this.DifficultyLevelGroup.Controls.Add(this.lvl2);
             this.DifficultyLevelGroup.Controls.Add(this.lvl3);
-            this.DifficultyLevelGroup.Controls.Add(this.randomlvl);
             this.DifficultyLevelGroup.Location = new System.Drawing.Point(0, 114);
             this.DifficultyLevelGroup.Name = "DifficultyLevelGroup";
             this.DifficultyLevelGroup.Size = new System.Drawing.Size(200, 97);
@@ -185,17 +183,6 @@ namespace Kursach_2._0
             this.lvl3.TabStop = true;
             this.lvl3.Text = "Сложность 3";
             this.lvl3.UseVisualStyleBackColor = true;
-            // 
-            // randomlvl
-            // 
-            this.randomlvl.AutoSize = true;
-            this.randomlvl.Location = new System.Drawing.Point(0, 76);
-            this.randomlvl.Name = "randomlvl";
-            this.randomlvl.Size = new System.Drawing.Size(136, 17);
-            this.randomlvl.TabIndex = 10;
-            this.randomlvl.TabStop = true;
-            this.randomlvl.Text = "Случайная сложность";
-            this.randomlvl.UseVisualStyleBackColor = true;
             // 
             // TypeGroup
             // 
@@ -370,7 +357,6 @@ namespace Kursach_2._0
         public System.Windows.Forms.RadioButton lvl1;
         public System.Windows.Forms.RadioButton lvl2;
         public System.Windows.Forms.RadioButton lvl3;
-        public System.Windows.Forms.RadioButton randomlvl;
         public System.Windows.Forms.GroupBox TypeGroup;
         public System.Windows.Forms.RadioButton training_mode;
         public System.Windows.Forms.RadioButton time_mode;

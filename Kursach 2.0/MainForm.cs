@@ -51,9 +51,9 @@ namespace Kursach_2._0
         private void StartButtonOnMainForm_Click(object sender, EventArgs e)
         {
             ResultForm resultForm = new ResultForm();
-            if ((lvl1.Checked || lvl2.Checked || lvl3.Checked || randomlvl.Checked) && (time_mode.Checked || training_mode.Checked) && (num10.Checked || num20.Checked || num30.Checked))
+            if ((lvl1.Checked || lvl2.Checked || lvl3.Checked) && (time_mode.Checked || training_mode.Checked) && (num10.Checked || num20.Checked || num30.Checked))
             {
-                if (lvl1.Checked) gameFormonmain.lvl = 1; else if (lvl2.Checked) gameFormonmain.lvl = 2; else if (lvl3.Checked) gameFormonmain.lvl = 3; else if (randomlvl.Checked) gameFormonmain.lvl = 4;
+                if (lvl1.Checked) gameFormonmain.lvl = 1; else if (lvl2.Checked) gameFormonmain.lvl = 2; else if (lvl3.Checked) gameFormonmain.lvl = 3;
 
                 if (time_mode.Checked) gameFormonmain.gamemode = 1; else if (training_mode.Checked) gameFormonmain.gamemode = 2;
 

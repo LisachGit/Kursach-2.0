@@ -130,7 +130,7 @@ namespace Kursach_2._0
             // 
             this.num1labelOnGameForm.AutoSize = true;
             this.num1labelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.num1labelOnGameForm.Location = new System.Drawing.Point(241, 174);
+            this.num1labelOnGameForm.Location = new System.Drawing.Point(214, 173);
             this.num1labelOnGameForm.Name = "num1labelOnGameForm";
             this.num1labelOnGameForm.Size = new System.Drawing.Size(69, 73);
             this.num1labelOnGameForm.TabIndex = 29;
@@ -152,7 +152,7 @@ namespace Kursach_2._0
             // 
             this.num2labelOnGameForm.AutoSize = true;
             this.num2labelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.num2labelOnGameForm.Location = new System.Drawing.Point(468, 173);
+            this.num2labelOnGameForm.Location = new System.Drawing.Point(510, 174);
             this.num2labelOnGameForm.Name = "num2labelOnGameForm";
             this.num2labelOnGameForm.Size = new System.Drawing.Size(69, 73);
             this.num2labelOnGameForm.TabIndex = 31;
