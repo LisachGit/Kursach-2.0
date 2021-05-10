@@ -79,5 +79,15 @@ namespace Kursach_2._0.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_54610737_stock_photo_start_button {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_54610737-stock-photo-start-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

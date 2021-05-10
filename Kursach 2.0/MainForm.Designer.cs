@@ -30,21 +30,15 @@ namespace Kursach_2._0
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.WelcomeLabelOnMainForm = new System.Windows.Forms.Label();
             this.ChooseDifficultyLevelOnMainForm = new System.Windows.Forms.Label();
             this.ChooseTypeOnMainForm = new System.Windows.Forms.Label();
             this.ChooseNumberOnMainForm = new System.Windows.Forms.Label();
-            this.DifficultyLevelGroup = new System.Windows.Forms.GroupBox();
             this.lvl1 = new System.Windows.Forms.RadioButton();
             this.lvl2 = new System.Windows.Forms.RadioButton();
             this.lvl3 = new System.Windows.Forms.RadioButton();
-            this.TypeGroup = new System.Windows.Forms.GroupBox();
             this.training_mode = new System.Windows.Forms.RadioButton();
             this.time_mode = new System.Windows.Forms.RadioButton();
-            this.NumberGroup = new System.Windows.Forms.GroupBox();
             this.num30 = new System.Windows.Forms.RadioButton();
             this.num20 = new System.Windows.Forms.RadioButton();
             this.num10 = new System.Windows.Forms.RadioButton();
@@ -54,68 +48,41 @@ namespace Kursach_2._0
             this.ExitIconOnMainForm = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.DifficultyLevelGroup.SuspendLayout();
-            this.TypeGroup.SuspendLayout();
-            this.NumberGroup.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Kursach_2._0.Properties.Resources._143946_tekstura_drevesiny_lak_laminat_morilka_tekstura_dereva_500x;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(802, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Kursach_2._0.Properties.Resources._143946_tekstura_drevesiny_lak_laminat_morilka_tekstura_dereva_500x;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 378);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(802, 72);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Kursach_2._0.Properties.Resources.depositphotos_318889202_stock_photo_green_blackboard_or_chalkboard;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 70);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(802, 320);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
-            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
             // 
             // WelcomeLabelOnMainForm
             // 
             this.WelcomeLabelOnMainForm.AutoSize = true;
-            this.WelcomeLabelOnMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WelcomeLabelOnMainForm.BackColor = System.Drawing.Color.Transparent;
+            this.WelcomeLabelOnMainForm.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WelcomeLabelOnMainForm.ForeColor = System.Drawing.Color.Red;
             this.WelcomeLabelOnMainForm.Location = new System.Drawing.Point(251, 9);
             this.WelcomeLabelOnMainForm.Name = "WelcomeLabelOnMainForm";
-            this.WelcomeLabelOnMainForm.Size = new System.Drawing.Size(313, 37);
+            this.WelcomeLabelOnMainForm.Size = new System.Drawing.Size(313, 45);
             this.WelcomeLabelOnMainForm.TabIndex = 14;
             this.WelcomeLabelOnMainForm.Text = "Добро пожаловать!";
             // 
             // ChooseDifficultyLevelOnMainForm
             // 
             this.ChooseDifficultyLevelOnMainForm.AutoSize = true;
-            this.ChooseDifficultyLevelOnMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChooseDifficultyLevelOnMainForm.Location = new System.Drawing.Point(-4, 94);
+            this.ChooseDifficultyLevelOnMainForm.BackColor = System.Drawing.Color.Transparent;
+            this.ChooseDifficultyLevelOnMainForm.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChooseDifficultyLevelOnMainForm.ForeColor = System.Drawing.Color.White;
+            this.ChooseDifficultyLevelOnMainForm.Location = new System.Drawing.Point(-2, 90);
             this.ChooseDifficultyLevelOnMainForm.Name = "ChooseDifficultyLevelOnMainForm";
-            this.ChooseDifficultyLevelOnMainForm.Size = new System.Drawing.Size(240, 20);
+            this.ChooseDifficultyLevelOnMainForm.Size = new System.Drawing.Size(268, 28);
             this.ChooseDifficultyLevelOnMainForm.TabIndex = 15;
             this.ChooseDifficultyLevelOnMainForm.Text = "Выберите уровень сложности:";
             this.ChooseDifficultyLevelOnMainForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ChooseDifficultyLevelOnMainForm_MouseMove);
@@ -123,40 +90,35 @@ namespace Kursach_2._0
             // ChooseTypeOnMainForm
             // 
             this.ChooseTypeOnMainForm.AutoSize = true;
-            this.ChooseTypeOnMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChooseTypeOnMainForm.Location = new System.Drawing.Point(312, 94);
+            this.ChooseTypeOnMainForm.BackColor = System.Drawing.Color.Transparent;
+            this.ChooseTypeOnMainForm.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseTypeOnMainForm.ForeColor = System.Drawing.Color.White;
+            this.ChooseTypeOnMainForm.Location = new System.Drawing.Point(303, 90);
             this.ChooseTypeOnMainForm.Name = "ChooseTypeOnMainForm";
-            this.ChooseTypeOnMainForm.Size = new System.Drawing.Size(182, 20);
+            this.ChooseTypeOnMainForm.Size = new System.Drawing.Size(209, 28);
             this.ChooseTypeOnMainForm.TabIndex = 16;
             this.ChooseTypeOnMainForm.Text = "Выберите режим игры:";
             // 
             // ChooseNumberOnMainForm
             // 
             this.ChooseNumberOnMainForm.AutoSize = true;
-            this.ChooseNumberOnMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChooseNumberOnMainForm.Location = new System.Drawing.Point(555, 94);
+            this.ChooseNumberOnMainForm.BackColor = System.Drawing.Color.Transparent;
+            this.ChooseNumberOnMainForm.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseNumberOnMainForm.ForeColor = System.Drawing.Color.White;
+            this.ChooseNumberOnMainForm.Location = new System.Drawing.Point(532, 90);
             this.ChooseNumberOnMainForm.Name = "ChooseNumberOnMainForm";
-            this.ChooseNumberOnMainForm.Size = new System.Drawing.Size(247, 20);
+            this.ChooseNumberOnMainForm.Size = new System.Drawing.Size(270, 28);
             this.ChooseNumberOnMainForm.TabIndex = 19;
             this.ChooseNumberOnMainForm.Text = "Введите количество примеров";
-            // 
-            // DifficultyLevelGroup
-            // 
-            this.DifficultyLevelGroup.Controls.Add(this.lvl1);
-            this.DifficultyLevelGroup.Controls.Add(this.lvl2);
-            this.DifficultyLevelGroup.Controls.Add(this.lvl3);
-            this.DifficultyLevelGroup.Location = new System.Drawing.Point(0, 114);
-            this.DifficultyLevelGroup.Name = "DifficultyLevelGroup";
-            this.DifficultyLevelGroup.Size = new System.Drawing.Size(200, 97);
-            this.DifficultyLevelGroup.TabIndex = 20;
-            this.DifficultyLevelGroup.TabStop = false;
             // 
             // lvl1
             // 
             this.lvl1.AutoSize = true;
-            this.lvl1.Location = new System.Drawing.Point(0, 7);
+            this.lvl1.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lvl1.ForeColor = System.Drawing.Color.White;
+            this.lvl1.Location = new System.Drawing.Point(3, 3);
             this.lvl1.Name = "lvl1";
-            this.lvl1.Size = new System.Drawing.Size(90, 17);
+            this.lvl1.Size = new System.Drawing.Size(97, 21);
             this.lvl1.TabIndex = 7;
             this.lvl1.TabStop = true;
             this.lvl1.Text = "Сложность 1";
@@ -165,9 +127,11 @@ namespace Kursach_2._0
             // lvl2
             // 
             this.lvl2.AutoSize = true;
-            this.lvl2.Location = new System.Drawing.Point(0, 30);
+            this.lvl2.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lvl2.ForeColor = System.Drawing.Color.White;
+            this.lvl2.Location = new System.Drawing.Point(3, 26);
             this.lvl2.Name = "lvl2";
-            this.lvl2.Size = new System.Drawing.Size(90, 17);
+            this.lvl2.Size = new System.Drawing.Size(99, 21);
             this.lvl2.TabIndex = 8;
             this.lvl2.TabStop = true;
             this.lvl2.Text = "Сложность 2";
@@ -176,30 +140,24 @@ namespace Kursach_2._0
             // lvl3
             // 
             this.lvl3.AutoSize = true;
-            this.lvl3.Location = new System.Drawing.Point(0, 53);
+            this.lvl3.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lvl3.ForeColor = System.Drawing.Color.White;
+            this.lvl3.Location = new System.Drawing.Point(3, 49);
             this.lvl3.Name = "lvl3";
-            this.lvl3.Size = new System.Drawing.Size(90, 17);
+            this.lvl3.Size = new System.Drawing.Size(99, 21);
             this.lvl3.TabIndex = 9;
             this.lvl3.TabStop = true;
             this.lvl3.Text = "Сложность 3";
             this.lvl3.UseVisualStyleBackColor = true;
             // 
-            // TypeGroup
-            // 
-            this.TypeGroup.Controls.Add(this.training_mode);
-            this.TypeGroup.Controls.Add(this.time_mode);
-            this.TypeGroup.Location = new System.Drawing.Point(304, 114);
-            this.TypeGroup.Name = "TypeGroup";
-            this.TypeGroup.Size = new System.Drawing.Size(200, 75);
-            this.TypeGroup.TabIndex = 21;
-            this.TypeGroup.TabStop = false;
-            // 
             // training_mode
             // 
             this.training_mode.AutoSize = true;
-            this.training_mode.Location = new System.Drawing.Point(0, 35);
+            this.training_mode.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.training_mode.ForeColor = System.Drawing.Color.White;
+            this.training_mode.Location = new System.Drawing.Point(3, 26);
             this.training_mode.Name = "training_mode";
-            this.training_mode.Size = new System.Drawing.Size(86, 17);
+            this.training_mode.Size = new System.Drawing.Size(95, 21);
             this.training_mode.TabIndex = 1;
             this.training_mode.TabStop = true;
             this.training_mode.Text = "Тренировка";
@@ -208,31 +166,24 @@ namespace Kursach_2._0
             // time_mode
             // 
             this.time_mode.AutoSize = true;
-            this.time_mode.Location = new System.Drawing.Point(0, 12);
+            this.time_mode.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time_mode.ForeColor = System.Drawing.Color.White;
+            this.time_mode.Location = new System.Drawing.Point(3, 3);
             this.time_mode.Name = "time_mode";
-            this.time_mode.Size = new System.Drawing.Size(74, 17);
+            this.time_mode.Size = new System.Drawing.Size(79, 21);
             this.time_mode.TabIndex = 0;
             this.time_mode.TabStop = true;
             this.time_mode.Text = "На время";
             this.time_mode.UseVisualStyleBackColor = true;
             // 
-            // NumberGroup
-            // 
-            this.NumberGroup.Controls.Add(this.num30);
-            this.NumberGroup.Controls.Add(this.num20);
-            this.NumberGroup.Controls.Add(this.num10);
-            this.NumberGroup.Location = new System.Drawing.Point(602, 114);
-            this.NumberGroup.Name = "NumberGroup";
-            this.NumberGroup.Size = new System.Drawing.Size(200, 100);
-            this.NumberGroup.TabIndex = 22;
-            this.NumberGroup.TabStop = false;
-            // 
             // num30
             // 
             this.num30.AutoSize = true;
-            this.num30.Location = new System.Drawing.Point(7, 58);
+            this.num30.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.num30.ForeColor = System.Drawing.Color.White;
+            this.num30.Location = new System.Drawing.Point(3, 46);
             this.num30.Name = "num30";
-            this.num30.Size = new System.Drawing.Size(37, 17);
+            this.num30.Size = new System.Drawing.Size(40, 21);
             this.num30.TabIndex = 2;
             this.num30.TabStop = true;
             this.num30.Text = "30";
@@ -241,9 +192,11 @@ namespace Kursach_2._0
             // num20
             // 
             this.num20.AutoSize = true;
-            this.num20.Location = new System.Drawing.Point(7, 35);
+            this.num20.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.num20.ForeColor = System.Drawing.Color.White;
+            this.num20.Location = new System.Drawing.Point(3, 23);
             this.num20.Name = "num20";
-            this.num20.Size = new System.Drawing.Size(37, 17);
+            this.num20.Size = new System.Drawing.Size(40, 21);
             this.num20.TabIndex = 1;
             this.num20.TabStop = true;
             this.num20.Text = "20";
@@ -252,9 +205,11 @@ namespace Kursach_2._0
             // num10
             // 
             this.num10.AutoSize = true;
-            this.num10.Location = new System.Drawing.Point(7, 12);
+            this.num10.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.num10.ForeColor = System.Drawing.Color.White;
+            this.num10.Location = new System.Drawing.Point(3, 0);
             this.num10.Name = "num10";
-            this.num10.Size = new System.Drawing.Size(37, 17);
+            this.num10.Size = new System.Drawing.Size(38, 21);
             this.num10.TabIndex = 0;
             this.num10.TabStop = true;
             this.num10.Text = "10";
@@ -308,18 +263,85 @@ namespace Kursach_2._0
             this.ExitIconOnMainForm.MouseLeave += new System.EventHandler(this.ExitIconOnMainForm_MouseLeave);
             this.ExitIconOnMainForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ExitIconOnMainForm_MouseMove);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Kursach_2._0.Properties.Resources._143946_tekstura_drevesiny_lak_laminat_morilka_tekstura_dereva_500x;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 378);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(802, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Kursach_2._0.Properties.Resources._143946_tekstura_drevesiny_lak_laminat_morilka_tekstura_dereva_500x;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(802, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Kursach_2._0.Properties.Resources.depositphotos_318889202_stock_photo_green_blackboard_or_chalkboard;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 70);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(802, 320);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.lvl1);
+            this.panel1.Controls.Add(this.lvl2);
+            this.panel1.Controls.Add(this.lvl3);
+            this.panel1.Location = new System.Drawing.Point(0, 114);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 27;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.training_mode);
+            this.panel2.Controls.Add(this.time_mode);
+            this.panel2.Location = new System.Drawing.Point(305, 114);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 28;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.num30);
+            this.panel3.Controls.Add(this.num10);
+            this.panel3.Controls.Add(this.num20);
+            this.panel3.Location = new System.Drawing.Point(602, 114);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.TabIndex = 29;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitIconOnMainForm);
             this.Controls.Add(this.AboutIconOnMainForm);
             this.Controls.Add(this.StartButtonOnMainForm);
             this.Controls.Add(this.GoBackButtonOnMainForm);
-            this.Controls.Add(this.NumberGroup);
-            this.Controls.Add(this.TypeGroup);
-            this.Controls.Add(this.DifficultyLevelGroup);
             this.Controls.Add(this.ChooseNumberOnMainForm);
             this.Controls.Add(this.ChooseTypeOnMainForm);
             this.Controls.Add(this.ChooseDifficultyLevelOnMainForm);
@@ -331,15 +353,15 @@ namespace Kursach_2._0
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.DifficultyLevelGroup.ResumeLayout(false);
-            this.DifficultyLevelGroup.PerformLayout();
-            this.TypeGroup.ResumeLayout(false);
-            this.TypeGroup.PerformLayout();
-            this.NumberGroup.ResumeLayout(false);
-            this.NumberGroup.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,14 +375,11 @@ namespace Kursach_2._0
         private System.Windows.Forms.Label ChooseDifficultyLevelOnMainForm;
         private System.Windows.Forms.Label ChooseTypeOnMainForm;
         private System.Windows.Forms.Label ChooseNumberOnMainForm;
-        private System.Windows.Forms.GroupBox DifficultyLevelGroup;
         public System.Windows.Forms.RadioButton lvl1;
         public System.Windows.Forms.RadioButton lvl2;
         public System.Windows.Forms.RadioButton lvl3;
-        public System.Windows.Forms.GroupBox TypeGroup;
         public System.Windows.Forms.RadioButton training_mode;
         public System.Windows.Forms.RadioButton time_mode;
-        public System.Windows.Forms.GroupBox NumberGroup;
         public System.Windows.Forms.RadioButton num30;
         public System.Windows.Forms.RadioButton num20;
         public System.Windows.Forms.RadioButton num10;
@@ -370,5 +389,8 @@ namespace Kursach_2._0
         private System.Windows.Forms.Label ExitIconOnMainForm;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

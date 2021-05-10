@@ -176,6 +176,17 @@ namespace Kursach_2._0
         public GameForm()
         {
             InitializeComponent();
+            GameNameOnGameForm.Parent = pictureBox1;
+            ScoreNameLabelOnGameForm.Parent = pictureBox3;
+            ScoreCountLabelOnGameForm.Parent = pictureBox3;
+            schetchikOnGameForm.Parent = pictureBox3;
+            TimeLabelOnMainForm.Parent = pictureBox3;
+            TimeCountMinutesLabelOnGameForm.Parent = pictureBox3;
+            TimeCountSecondsLabelOnGameForm.Parent = pictureBox3;
+            num1labelOnGameForm.Parent = pictureBox3;
+            operationlabelOnGameForm.Parent = pictureBox3;
+            num2labelOnGameForm.Parent = pictureBox3;
+            AnswerLabelNameOnGameForm.Parent = pictureBox3;
         }
 
         
@@ -314,10 +325,21 @@ namespace Kursach_2._0
                 }
                 else if (operation == 3)
                 {
-                    x1 = rndongameform.Next(16, 50);
                     do
                     {
-                        y1 = rndongameform.Next(2, 15);
+                        x1 = rndongameform.Next(10, 400);
+                        for (int i = 2; i <= x1 / 2; i++)
+                        {
+                            if (x1 % i == 0)
+                            {
+                                prost = false;
+                                break;
+                            }
+                        }
+                    } while (prost);
+                    do
+                    {
+                        y1 = rndongameform.Next(2, 399);
                     }
                     while (x1 % y1 != 0);
                 }

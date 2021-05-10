@@ -108,20 +108,24 @@ namespace Kursach_2._0
             // GameNameOnGameForm
             // 
             this.GameNameOnGameForm.AutoSize = true;
-            this.GameNameOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GameNameOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.GameNameOnGameForm.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GameNameOnGameForm.ForeColor = System.Drawing.Color.Red;
             this.GameNameOnGameForm.Location = new System.Drawing.Point(342, -1);
             this.GameNameOnGameForm.Name = "GameNameOnGameForm";
-            this.GameNameOnGameForm.Size = new System.Drawing.Size(91, 37);
+            this.GameNameOnGameForm.Size = new System.Drawing.Size(81, 39);
             this.GameNameOnGameForm.TabIndex = 16;
             this.GameNameOnGameForm.Text = "Игра";
             // 
             // schetchikOnGameForm
             // 
             this.schetchikOnGameForm.AutoSize = true;
-            this.schetchikOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.schetchikOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.schetchikOnGameForm.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.schetchikOnGameForm.ForeColor = System.Drawing.Color.White;
             this.schetchikOnGameForm.Location = new System.Drawing.Point(285, 74);
             this.schetchikOnGameForm.Name = "schetchikOnGameForm";
-            this.schetchikOnGameForm.Size = new System.Drawing.Size(214, 25);
+            this.schetchikOnGameForm.Size = new System.Drawing.Size(201, 26);
             this.schetchikOnGameForm.TabIndex = 28;
             this.schetchikOnGameForm.Text = "Счётчик примеров";
             this.schetchikOnGameForm.Visible = false;
@@ -129,10 +133,13 @@ namespace Kursach_2._0
             // num1labelOnGameForm
             // 
             this.num1labelOnGameForm.AutoSize = true;
-            this.num1labelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.num1labelOnGameForm.Location = new System.Drawing.Point(214, 173);
+            this.num1labelOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.num1labelOnGameForm.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num1labelOnGameForm.ForeColor = System.Drawing.Color.White;
+            this.num1labelOnGameForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.num1labelOnGameForm.Location = new System.Drawing.Point(226, 173);
             this.num1labelOnGameForm.Name = "num1labelOnGameForm";
-            this.num1labelOnGameForm.Size = new System.Drawing.Size(69, 73);
+            this.num1labelOnGameForm.Size = new System.Drawing.Size(70, 80);
             this.num1labelOnGameForm.TabIndex = 29;
             this.num1labelOnGameForm.Text = "9";
             this.num1labelOnGameForm.Visible = false;
@@ -140,10 +147,12 @@ namespace Kursach_2._0
             // operationlabelOnGameForm
             // 
             this.operationlabelOnGameForm.AutoSize = true;
-            this.operationlabelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.operationlabelOnGameForm.Location = new System.Drawing.Point(354, 173);
+            this.operationlabelOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.operationlabelOnGameForm.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operationlabelOnGameForm.ForeColor = System.Drawing.Color.White;
+            this.operationlabelOnGameForm.Location = new System.Drawing.Point(358, 173);
             this.operationlabelOnGameForm.Name = "operationlabelOnGameForm";
-            this.operationlabelOnGameForm.Size = new System.Drawing.Size(70, 73);
+            this.operationlabelOnGameForm.Size = new System.Drawing.Size(69, 80);
             this.operationlabelOnGameForm.TabIndex = 30;
             this.operationlabelOnGameForm.Text = "+";
             this.operationlabelOnGameForm.Visible = false;
@@ -151,10 +160,12 @@ namespace Kursach_2._0
             // num2labelOnGameForm
             // 
             this.num2labelOnGameForm.AutoSize = true;
-            this.num2labelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.num2labelOnGameForm.Location = new System.Drawing.Point(510, 174);
+            this.num2labelOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.num2labelOnGameForm.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num2labelOnGameForm.ForeColor = System.Drawing.Color.White;
+            this.num2labelOnGameForm.Location = new System.Drawing.Point(478, 173);
             this.num2labelOnGameForm.Name = "num2labelOnGameForm";
-            this.num2labelOnGameForm.Size = new System.Drawing.Size(69, 73);
+            this.num2labelOnGameForm.Size = new System.Drawing.Size(60, 80);
             this.num2labelOnGameForm.TabIndex = 31;
             this.num2labelOnGameForm.Text = "7";
             this.num2labelOnGameForm.Visible = false;
@@ -173,10 +184,12 @@ namespace Kursach_2._0
             // AnswerLabelNameOnGameForm
             // 
             this.AnswerLabelNameOnGameForm.AutoSize = true;
-            this.AnswerLabelNameOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AnswerLabelNameOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerLabelNameOnGameForm.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AnswerLabelNameOnGameForm.ForeColor = System.Drawing.Color.White;
             this.AnswerLabelNameOnGameForm.Location = new System.Drawing.Point(345, 344);
             this.AnswerLabelNameOnGameForm.Name = "AnswerLabelNameOnGameForm";
-            this.AnswerLabelNameOnGameForm.Size = new System.Drawing.Size(88, 31);
+            this.AnswerLabelNameOnGameForm.Size = new System.Drawing.Size(82, 34);
             this.AnswerLabelNameOnGameForm.TabIndex = 33;
             this.AnswerLabelNameOnGameForm.Text = "Ответ";
             this.AnswerLabelNameOnGameForm.Visible = false;
@@ -205,10 +218,12 @@ namespace Kursach_2._0
             // ScoreNameLabelOnGameForm
             // 
             this.ScoreNameLabelOnGameForm.AutoSize = true;
-            this.ScoreNameLabelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScoreNameLabelOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.ScoreNameLabelOnGameForm.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScoreNameLabelOnGameForm.ForeColor = System.Drawing.Color.White;
             this.ScoreNameLabelOnGameForm.Location = new System.Drawing.Point(12, 74);
             this.ScoreNameLabelOnGameForm.Name = "ScoreNameLabelOnGameForm";
-            this.ScoreNameLabelOnGameForm.Size = new System.Drawing.Size(75, 31);
+            this.ScoreNameLabelOnGameForm.Size = new System.Drawing.Size(70, 34);
             this.ScoreNameLabelOnGameForm.TabIndex = 36;
             this.ScoreNameLabelOnGameForm.Text = "Счёт";
             this.ScoreNameLabelOnGameForm.Visible = false;
@@ -216,10 +231,12 @@ namespace Kursach_2._0
             // ScoreCountLabelOnGameForm
             // 
             this.ScoreCountLabelOnGameForm.AutoSize = true;
-            this.ScoreCountLabelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScoreCountLabelOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.ScoreCountLabelOnGameForm.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScoreCountLabelOnGameForm.ForeColor = System.Drawing.Color.White;
             this.ScoreCountLabelOnGameForm.Location = new System.Drawing.Point(24, 114);
             this.ScoreCountLabelOnGameForm.Name = "ScoreCountLabelOnGameForm";
-            this.ScoreCountLabelOnGameForm.Size = new System.Drawing.Size(54, 24);
+            this.ScoreCountLabelOnGameForm.Size = new System.Drawing.Size(49, 23);
             this.ScoreCountLabelOnGameForm.TabIndex = 37;
             this.ScoreCountLabelOnGameForm.Text = "Счёт";
             this.ScoreCountLabelOnGameForm.Visible = false;
@@ -227,10 +244,12 @@ namespace Kursach_2._0
             // TimeLabelOnMainForm
             // 
             this.TimeLabelOnMainForm.AutoSize = true;
-            this.TimeLabelOnMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeLabelOnMainForm.BackColor = System.Drawing.Color.Transparent;
+            this.TimeLabelOnMainForm.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeLabelOnMainForm.ForeColor = System.Drawing.Color.White;
             this.TimeLabelOnMainForm.Location = new System.Drawing.Point(674, 74);
             this.TimeLabelOnMainForm.Name = "TimeLabelOnMainForm";
-            this.TimeLabelOnMainForm.Size = new System.Drawing.Size(96, 31);
+            this.TimeLabelOnMainForm.Size = new System.Drawing.Size(90, 34);
             this.TimeLabelOnMainForm.TabIndex = 38;
             this.TimeLabelOnMainForm.Text = "Время";
             this.TimeLabelOnMainForm.Visible = false;
@@ -238,10 +257,12 @@ namespace Kursach_2._0
             // TimeCountMinutesLabelOnGameForm
             // 
             this.TimeCountMinutesLabelOnGameForm.AutoSize = true;
-            this.TimeCountMinutesLabelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeCountMinutesLabelOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.TimeCountMinutesLabelOnGameForm.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeCountMinutesLabelOnGameForm.ForeColor = System.Drawing.Color.White;
             this.TimeCountMinutesLabelOnGameForm.Location = new System.Drawing.Point(689, 114);
             this.TimeCountMinutesLabelOnGameForm.Name = "TimeCountMinutesLabelOnGameForm";
-            this.TimeCountMinutesLabelOnGameForm.Size = new System.Drawing.Size(30, 24);
+            this.TimeCountMinutesLabelOnGameForm.Size = new System.Drawing.Size(30, 23);
             this.TimeCountMinutesLabelOnGameForm.TabIndex = 39;
             this.TimeCountMinutesLabelOnGameForm.Text = "00";
             this.TimeCountMinutesLabelOnGameForm.Visible = false;
@@ -265,10 +286,12 @@ namespace Kursach_2._0
             // TimeCountSecondsLabelOnGameForm
             // 
             this.TimeCountSecondsLabelOnGameForm.AutoSize = true;
-            this.TimeCountSecondsLabelOnGameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeCountSecondsLabelOnGameForm.BackColor = System.Drawing.Color.Transparent;
+            this.TimeCountSecondsLabelOnGameForm.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimeCountSecondsLabelOnGameForm.ForeColor = System.Drawing.Color.White;
             this.TimeCountSecondsLabelOnGameForm.Location = new System.Drawing.Point(725, 114);
             this.TimeCountSecondsLabelOnGameForm.Name = "TimeCountSecondsLabelOnGameForm";
-            this.TimeCountSecondsLabelOnGameForm.Size = new System.Drawing.Size(30, 24);
+            this.TimeCountSecondsLabelOnGameForm.Size = new System.Drawing.Size(30, 23);
             this.TimeCountSecondsLabelOnGameForm.TabIndex = 41;
             this.TimeCountSecondsLabelOnGameForm.Text = "00";
             this.TimeCountSecondsLabelOnGameForm.Visible = false;
@@ -278,6 +301,7 @@ namespace Kursach_2._0
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.operationlabelOnGameForm);
             this.Controls.Add(this.TimeCountSecondsLabelOnGameForm);
             this.Controls.Add(this.GoBackButtonOnGameForm);
             this.Controls.Add(this.TimeCountMinutesLabelOnGameForm);
@@ -289,7 +313,6 @@ namespace Kursach_2._0
             this.Controls.Add(this.AnswerLabelNameOnGameForm);
             this.Controls.Add(this.StartTheActionButtonOnGameForm);
             this.Controls.Add(this.num2labelOnGameForm);
-            this.Controls.Add(this.operationlabelOnGameForm);
             this.Controls.Add(this.num1labelOnGameForm);
             this.Controls.Add(this.schetchikOnGameForm);
             this.Controls.Add(this.GameNameOnGameForm);

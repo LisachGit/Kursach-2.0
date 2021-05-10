@@ -19,6 +19,13 @@ namespace Kursach_2._0
         public MainForm()
         {
             InitializeComponent();
+            WelcomeLabelOnMainForm.Parent = pictureBox1;
+            ChooseDifficultyLevelOnMainForm.Parent = pictureBox3;
+            ChooseNumberOnMainForm.Parent = pictureBox3;
+            ChooseTypeOnMainForm.Parent = pictureBox3;
+            panel1.Parent = pictureBox3;
+            panel2.Parent = pictureBox3;
+            panel3.Parent = pictureBox3;
         }
 
         private void ExitIconOnMainForm_MouseMove(object sender, MouseEventArgs e)

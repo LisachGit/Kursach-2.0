@@ -59,10 +59,15 @@ namespace Kursach_2._0
             // EndGameLabelOnResultLabel
             // 
             this.EndGameLabelOnResultLabel.AutoSize = true;
-            this.EndGameLabelOnResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EndGameLabelOnResultLabel.Location = new System.Drawing.Point(259, 9);
+            this.EndGameLabelOnResultLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EndGameLabelOnResultLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.EndGameLabelOnResultLabel.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EndGameLabelOnResultLabel.ForeColor = System.Drawing.Color.Red;
+            this.EndGameLabelOnResultLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.EndGameLabelOnResultLabel.Location = new System.Drawing.Point(252, 4);
             this.EndGameLabelOnResultLabel.Name = "EndGameLabelOnResultLabel";
-            this.EndGameLabelOnResultLabel.Size = new System.Drawing.Size(300, 42);
+            this.EndGameLabelOnResultLabel.Size = new System.Drawing.Size(315, 59);
             this.EndGameLabelOnResultLabel.TabIndex = 17;
             this.EndGameLabelOnResultLabel.Text = "Игра окончена!";
             // 
@@ -106,12 +111,14 @@ namespace Kursach_2._0
             // ResultScoreLabel
             // 
             this.ResultScoreLabel.AutoSize = true;
-            this.ResultScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ResultScoreLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ResultScoreLabel.Font = new System.Drawing.Font("Book Antiqua", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultScoreLabel.ForeColor = System.Drawing.Color.White;
             this.ResultScoreLabel.Location = new System.Drawing.Point(40, 123);
             this.ResultScoreLabel.Name = "ResultScoreLabel";
-            this.ResultScoreLabel.Size = new System.Drawing.Size(66, 24);
+            this.ResultScoreLabel.Size = new System.Drawing.Size(128, 42);
             this.ResultScoreLabel.TabIndex = 21;
-            this.ResultScoreLabel.Text = "label1";
+            this.ResultScoreLabel.Text = "текст";
             // 
             // ToMainMenuButtonOnResultForm
             // 
@@ -127,20 +134,24 @@ namespace Kursach_2._0
             // MarkLabel
             // 
             this.MarkLabel.AutoSize = true;
-            this.MarkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MarkLabel.Location = new System.Drawing.Point(40, 178);
+            this.MarkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MarkLabel.Font = new System.Drawing.Font("Book Antiqua", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MarkLabel.ForeColor = System.Drawing.Color.White;
+            this.MarkLabel.Location = new System.Drawing.Point(40, 188);
             this.MarkLabel.Name = "MarkLabel";
-            this.MarkLabel.Size = new System.Drawing.Size(57, 20);
+            this.MarkLabel.Size = new System.Drawing.Size(92, 32);
             this.MarkLabel.TabIndex = 24;
             this.MarkLabel.Text = "label1";
             // 
             // elapsedTimeLabel
             // 
             this.elapsedTimeLabel.AutoSize = true;
-            this.elapsedTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.elapsedTimeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.elapsedTimeLabel.Font = new System.Drawing.Font("Book Antiqua", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.elapsedTimeLabel.ForeColor = System.Drawing.Color.White;
             this.elapsedTimeLabel.Location = new System.Drawing.Point(40, 238);
             this.elapsedTimeLabel.Name = "elapsedTimeLabel";
-            this.elapsedTimeLabel.Size = new System.Drawing.Size(57, 20);
+            this.elapsedTimeLabel.Size = new System.Drawing.Size(92, 32);
             this.elapsedTimeLabel.TabIndex = 25;
             this.elapsedTimeLabel.Text = "label1";
             this.elapsedTimeLabel.Visible = false;
@@ -150,11 +161,11 @@ namespace Kursach_2._0
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EndGameLabelOnResultLabel);
             this.Controls.Add(this.elapsedTimeLabel);
             this.Controls.Add(this.MarkLabel);
             this.Controls.Add(this.ToMainMenuButtonOnResultForm);
             this.Controls.Add(this.ResultScoreLabel);
-            this.Controls.Add(this.EndGameLabelOnResultLabel);
             this.Controls.Add(this.ExitIconOnResutForm);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);

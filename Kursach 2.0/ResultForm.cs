@@ -15,6 +15,10 @@ namespace Kursach_2._0
         public ResultForm()
         {
             InitializeComponent();
+            EndGameLabelOnResultLabel.Parent = pictureBox1;
+            elapsedTimeLabel.Parent = pictureBox3;
+            MarkLabel.Parent = pictureBox3;
+            ResultScoreLabel.Parent = pictureBox3;
         }
         public double scoreoonResultForm, numerOnResultForm, persent;
         public int gamemodenumber, elspasedTimeMinutes, elapsedTimeSeconds;

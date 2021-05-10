@@ -19,6 +19,10 @@ namespace Kursach_2._0
         public WelcomeForm()
         {
             InitializeComponent();
+            label1.Parent = pictureBox1;
+            label2.Parent = pictureBox3;
+            label4.Parent = pictureBox3;
+            label5.Parent = pictureBox3;
         }
 
         private void ExitIcon_Click(object sender, EventArgs e)
