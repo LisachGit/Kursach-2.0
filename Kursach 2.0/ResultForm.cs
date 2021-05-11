@@ -26,7 +26,7 @@ namespace Kursach_2._0
         private void ResultForm_Shown(object sender, EventArgs e)
         {
             persent = (scoreoonResultForm / numerOnResultForm) * 100;
-            ResultScoreLabel.Text = "Вы ответили на " + Convert.ToString(persent) + "% правильно!";
+            ResultScoreLabel.Text = "Вы ответили на " + string.Format("{0:0.00}", Convert.ToString(persent)) + "% правильно!";
             if (persent <= 20) MarkLabel.Text = "Ваш уровень знания устного счёта: Низкий";
             else if (persent > 20 && persent <= 40) MarkLabel.Text = "Ваш уровень знания устного счёта: Ниже среднего";
             else if (persent > 40 && persent <= 60) MarkLabel.Text = "Ваш уровень знания устного счёта: Средний";

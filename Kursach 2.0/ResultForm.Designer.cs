@@ -60,16 +60,15 @@ namespace Kursach_2._0
             // 
             this.EndGameLabelOnResultLabel.AutoSize = true;
             this.EndGameLabelOnResultLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EndGameLabelOnResultLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.EndGameLabelOnResultLabel.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EndGameLabelOnResultLabel.ForeColor = System.Drawing.Color.Red;
             this.EndGameLabelOnResultLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EndGameLabelOnResultLabel.Location = new System.Drawing.Point(252, 4);
+            this.EndGameLabelOnResultLabel.Location = new System.Drawing.Point(182, 9);
             this.EndGameLabelOnResultLabel.Name = "EndGameLabelOnResultLabel";
-            this.EndGameLabelOnResultLabel.Size = new System.Drawing.Size(315, 59);
+            this.EndGameLabelOnResultLabel.Size = new System.Drawing.Size(454, 57);
             this.EndGameLabelOnResultLabel.TabIndex = 17;
-            this.EndGameLabelOnResultLabel.Text = "Игра окончена!";
+            this.EndGameLabelOnResultLabel.Text = "Тренировка окончена!";
             // 
             // pictureBox1
             // 
@@ -123,7 +122,7 @@ namespace Kursach_2._0
             // ToMainMenuButtonOnResultForm
             // 
             this.ToMainMenuButtonOnResultForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToMainMenuButtonOnResultForm.Location = new System.Drawing.Point(308, 404);
+            this.ToMainMenuButtonOnResultForm.Location = new System.Drawing.Point(314, 404);
             this.ToMainMenuButtonOnResultForm.Name = "ToMainMenuButtonOnResultForm";
             this.ToMainMenuButtonOnResultForm.Size = new System.Drawing.Size(172, 47);
             this.ToMainMenuButtonOnResultForm.TabIndex = 22;

@@ -235,8 +235,8 @@ namespace Kursach_2._0
                 operation = rndongameform.Next(4); // 1 это плюс, 0 это минус, 2 это умножить, 3 это деление
                 if (operation == 2)
                 {
-                    x1 = rndongameform.Next(1, 10);
-                    y1 = rndongameform.Next(2, 10);
+                    x1 = rndongameform.Next(2, 20);
+                    y1 = rndongameform.Next(5, 30);
                 }
                 else if (operation == 3)
                 {
@@ -320,28 +320,30 @@ namespace Kursach_2._0
                 operation = rndongameform.Next(4); // 1 это плюс, 0 это минус, 2 это умножить, 3 это деление
                 if (operation == 2)
                 {
-                    x1 = rndongameform.Next(1, 10);
-                    y1 = rndongameform.Next(2, 10);
+                    x1 = rndongameform.Next(2, 20);
+                    y1 = rndongameform.Next(5, 30);
                 }
                 else if (operation == 3)
                 {
-                    do
-                    {
-                        x1 = rndongameform.Next(10, 400);
-                        for (int i = 2; i <= x1 / 2; i++)
+                    
+                        do
                         {
-                            if (x1 % i == 0)
+                            x1 = rndongameform.Next(10, 400);
+                            for (int i = 2; i <= x1 / 2; i++)
                             {
-                                prost = false;
-                                break;
+                                if (x1 % i == 0)
+                                {
+                                    prost = false;
+                                    break;
+                                }
                             }
+                        } while (prost);
+                        do
+                        {
+                            y1 = rndongameform.Next(2, 399);
                         }
-                    } while (prost);
-                    do
-                    {
-                        y1 = rndongameform.Next(2, 399);
-                    }
-                    while (x1 % y1 != 0);
+                        while ((x1 % y1 != 0) && (x1 != y1) );
+                        
                 }
                 else if (operation == 1)
                 {

@@ -26,6 +26,7 @@ namespace Kursach_2._0
             panel1.Parent = pictureBox3;
             panel2.Parent = pictureBox3;
             panel3.Parent = pictureBox3;
+            AboutLvlsLabel.Parent = pictureBox3;
         }
 
         private void ExitIconOnMainForm_MouseMove(object sender, MouseEventArgs e)
@@ -43,10 +44,6 @@ namespace Kursach_2._0
             Application.Exit();
         }
 
-        private void ChooseDifficultyLevelOnMainForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            toolTip1.SetToolTip(ChooseDifficultyLevelOnMainForm, "Тут написать про классы");
-        }
 
         private void GoBackButtonOnMainForm_Click(object sender, EventArgs e)
         {
@@ -128,6 +125,21 @@ namespace Kursach_2._0
         private void AboutIconOnMainForm_Click(object sender, EventArgs e)
         {
             aboutFormOnMain.Show();
+        }
+
+        private void AboutLvlsLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            AboutLvlsLabel.ForeColor = Color.Cyan;
+        }
+
+        private void AboutLvlsLabel_MouseLeave(object sender, EventArgs e)
+        {
+            AboutLvlsLabel.ForeColor = Color.White;
+        }
+
+        private void AboutLvlsLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Сложность 1 - Базовая тренировка на сложение и вычитания \nСложность 2 - Средний уровень тренировки сложения, вычитания и умножения \nСложность 3 - Продвинутый уровень тренировки сложения, вычитания, умножения и деления");
         }
     }
 }

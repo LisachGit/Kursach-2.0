@@ -61,36 +61,35 @@ namespace Kursach_2._0
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 89);
+            this.label2.Location = new System.Drawing.Point(273, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(397, 22);
+            this.label2.Size = new System.Drawing.Size(259, 28);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Подготовил студент группы 240418 Лисицкий Павел";
+            this.label2.Text = "Тренировка устного счёта";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 137);
+            this.label4.Location = new System.Drawing.Point(234, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(468, 44);
+            this.label4.Size = new System.Drawing.Size(330, 43);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Под руководством  доцента кафедры прикладной математики\r\nинформатики математическ" +
-    "ого факультета БГПУ";
+            this.label4.Text = "Автор - Лисицкий П.А.";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(10, 208);
+            this.label5.Location = new System.Drawing.Point(250, 121);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 36);
+            this.label5.Size = new System.Drawing.Size(304, 28);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Шербаф А.И.";
+            this.label5.Text = "Руководитель - Шербаф А.И.";
             // 
             // AboutOnWelcomeForm
             // 

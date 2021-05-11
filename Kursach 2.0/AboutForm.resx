@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>30, 18</value>
-  </metadata>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Устный счёт
+Подготовил студент БГПУ им. Максима Танка, группы 240418
+Лисицкий Павел Александрович
+Под руководством  доцента кафедры прикладной математики и информатики математического факультета БГПУ
+Шербаф Алмас Ибрагимовны
+
+Минск, 2021</value>
+  </data>
 </root>

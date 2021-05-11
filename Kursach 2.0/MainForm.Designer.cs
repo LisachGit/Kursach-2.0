@@ -46,7 +46,6 @@ namespace Kursach_2._0
             this.StartButtonOnMainForm = new System.Windows.Forms.Button();
             this.AboutIconOnMainForm = new System.Windows.Forms.Label();
             this.ExitIconOnMainForm = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,6 +53,7 @@ namespace Kursach_2._0
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AboutLvlsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -85,7 +85,6 @@ namespace Kursach_2._0
             this.ChooseDifficultyLevelOnMainForm.Size = new System.Drawing.Size(268, 28);
             this.ChooseDifficultyLevelOnMainForm.TabIndex = 15;
             this.ChooseDifficultyLevelOnMainForm.Text = "Выберите уровень сложности:";
-            this.ChooseDifficultyLevelOnMainForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ChooseDifficultyLevelOnMainForm_MouseMove);
             // 
             // ChooseTypeOnMainForm
             // 
@@ -218,7 +217,7 @@ namespace Kursach_2._0
             // GoBackButtonOnMainForm
             // 
             this.GoBackButtonOnMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GoBackButtonOnMainForm.Location = new System.Drawing.Point(200, 397);
+            this.GoBackButtonOnMainForm.Location = new System.Drawing.Point(3, 395);
             this.GoBackButtonOnMainForm.Name = "GoBackButtonOnMainForm";
             this.GoBackButtonOnMainForm.Size = new System.Drawing.Size(136, 53);
             this.GoBackButtonOnMainForm.TabIndex = 23;
@@ -229,11 +228,11 @@ namespace Kursach_2._0
             // StartButtonOnMainForm
             // 
             this.StartButtonOnMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StartButtonOnMainForm.Location = new System.Drawing.Point(467, 396);
+            this.StartButtonOnMainForm.Location = new System.Drawing.Point(332, 398);
             this.StartButtonOnMainForm.Name = "StartButtonOnMainForm";
             this.StartButtonOnMainForm.Size = new System.Drawing.Size(139, 52);
             this.StartButtonOnMainForm.TabIndex = 24;
-            this.StartButtonOnMainForm.Text = "LESSS GOO";
+            this.StartButtonOnMainForm.Text = "Тренироваться";
             this.StartButtonOnMainForm.UseVisualStyleBackColor = true;
             this.StartButtonOnMainForm.Click += new System.EventHandler(this.StartButtonOnMainForm_Click);
             // 
@@ -330,11 +329,27 @@ namespace Kursach_2._0
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 29;
             // 
+            // AboutLvlsLabel
+            // 
+            this.AboutLvlsLabel.AutoSize = true;
+            this.AboutLvlsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AboutLvlsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AboutLvlsLabel.ForeColor = System.Drawing.Color.White;
+            this.AboutLvlsLabel.Location = new System.Drawing.Point(250, 74);
+            this.AboutLvlsLabel.Name = "AboutLvlsLabel";
+            this.AboutLvlsLabel.Size = new System.Drawing.Size(16, 18);
+            this.AboutLvlsLabel.TabIndex = 30;
+            this.AboutLvlsLabel.Text = "?";
+            this.AboutLvlsLabel.Click += new System.EventHandler(this.AboutLvlsLabel_Click);
+            this.AboutLvlsLabel.MouseLeave += new System.EventHandler(this.AboutLvlsLabel_MouseLeave);
+            this.AboutLvlsLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AboutLvlsLabel_MouseMove);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AboutLvlsLabel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -387,10 +402,10 @@ namespace Kursach_2._0
         private System.Windows.Forms.Button StartButtonOnMainForm;
         private System.Windows.Forms.Label AboutIconOnMainForm;
         private System.Windows.Forms.Label ExitIconOnMainForm;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label AboutLvlsLabel;
     }
 }
