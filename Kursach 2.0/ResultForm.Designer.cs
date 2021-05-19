@@ -38,6 +38,7 @@ namespace Kursach_2._0
             this.ToMainMenuButtonOnResultForm = new System.Windows.Forms.Button();
             this.MarkLabel = new System.Windows.Forms.Label();
             this.elapsedTimeLabel = new System.Windows.Forms.Label();
+            this.persentage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -136,7 +137,7 @@ namespace Kursach_2._0
             this.MarkLabel.BackColor = System.Drawing.Color.Transparent;
             this.MarkLabel.Font = new System.Drawing.Font("Book Antiqua", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MarkLabel.ForeColor = System.Drawing.Color.White;
-            this.MarkLabel.Location = new System.Drawing.Point(40, 188);
+            this.MarkLabel.Location = new System.Drawing.Point(40, 226);
             this.MarkLabel.Name = "MarkLabel";
             this.MarkLabel.Size = new System.Drawing.Size(92, 32);
             this.MarkLabel.TabIndex = 24;
@@ -148,18 +149,31 @@ namespace Kursach_2._0
             this.elapsedTimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.elapsedTimeLabel.Font = new System.Drawing.Font("Book Antiqua", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.elapsedTimeLabel.ForeColor = System.Drawing.Color.White;
-            this.elapsedTimeLabel.Location = new System.Drawing.Point(40, 238);
+            this.elapsedTimeLabel.Location = new System.Drawing.Point(40, 280);
             this.elapsedTimeLabel.Name = "elapsedTimeLabel";
             this.elapsedTimeLabel.Size = new System.Drawing.Size(92, 32);
             this.elapsedTimeLabel.TabIndex = 25;
             this.elapsedTimeLabel.Text = "label1";
             this.elapsedTimeLabel.Visible = false;
             // 
+            // persentage
+            // 
+            this.persentage.AutoSize = true;
+            this.persentage.BackColor = System.Drawing.Color.Transparent;
+            this.persentage.Font = new System.Drawing.Font("Book Antiqua", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.persentage.ForeColor = System.Drawing.Color.White;
+            this.persentage.Location = new System.Drawing.Point(226, 178);
+            this.persentage.Name = "persentage";
+            this.persentage.Size = new System.Drawing.Size(89, 29);
+            this.persentage.TabIndex = 26;
+            this.persentage.Text = "текст";
+            // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.persentage);
             this.Controls.Add(this.EndGameLabelOnResultLabel);
             this.Controls.Add(this.elapsedTimeLabel);
             this.Controls.Add(this.MarkLabel);
@@ -193,5 +207,6 @@ namespace Kursach_2._0
         private System.Windows.Forms.Button ToMainMenuButtonOnResultForm;
         private System.Windows.Forms.Label MarkLabel;
         private System.Windows.Forms.Label elapsedTimeLabel;
+        private System.Windows.Forms.Label persentage;
     }
 }

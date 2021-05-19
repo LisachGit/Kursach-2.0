@@ -27,6 +27,8 @@ namespace Kursach_2._0
             panel2.Parent = pictureBox3;
             panel3.Parent = pictureBox3;
             AboutLvlsLabel.Parent = pictureBox3;
+            SelectTimeLabel.Parent = pictureBox3;
+            panel4.Parent = pictureBox3;
         }
 
         private void ExitIconOnMainForm_MouseMove(object sender, MouseEventArgs e)
@@ -55,13 +57,15 @@ namespace Kursach_2._0
         private void StartButtonOnMainForm_Click(object sender, EventArgs e)
         {
             ResultForm resultForm = new ResultForm();
-            if ((lvl1.Checked || lvl2.Checked || lvl3.Checked) && (time_mode.Checked || training_mode.Checked) && (num10.Checked || num20.Checked || num30.Checked))
+            if ((lvl1.Checked || lvl2.Checked || lvl3.Checked) && training_mode.Checked && (num10.Checked || num20.Checked || num30.Checked) || (lvl1.Checked || lvl2.Checked || lvl3.Checked) && time_mode.Checked && (sec30button.Checked || minute1button.Checked || minute2button.Checked || minute5button.Checked))
             {
                 if (lvl1.Checked) gameFormonmain.lvl = 1; else if (lvl2.Checked) gameFormonmain.lvl = 2; else if (lvl3.Checked) gameFormonmain.lvl = 3;
 
                 if (time_mode.Checked) gameFormonmain.gamemode = 1; else if (training_mode.Checked) gameFormonmain.gamemode = 2;
 
                 if (num10.Checked) { gameFormonmain.numer = 10; resultForm.numerOnResultForm = 10; } else if (num20.Checked) { gameFormonmain.numer = 20; resultForm.numerOnResultForm = 20; } else if (num30.Checked) {gameFormonmain.numer = 30; resultForm.numerOnResultForm = 30; }
+
+                if (sec30button.Checked) { gameFormonmain.timevalue = 1; } else if (minute1button.Checked) { gameFormonmain.timevalue = 2; } else if (minute2button.Checked) { gameFormonmain.timevalue = 3; } else if (minute5button.Checked) { gameFormonmain.timevalue = 4; }
                 this.Hide();
                 gameFormonmain.Show();
             }
@@ -140,6 +144,28 @@ namespace Kursach_2._0
         private void AboutLvlsLabel_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Сложность 1 - Базовая тренировка на сложение и вычитания \nСложность 2 - Средний уровень тренировки сложения, вычитания и умножения \nСложность 3 - Продвинутый уровень тренировки сложения, вычитания, умножения и деления");
+        }
+
+        private void time_mode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (time_mode.Checked == true)
+            {
+                SelectTimeLabel.Visible = true;
+                panel4.Visible = true;
+                panel3.Visible = false;
+                ChooseNumberOnMainForm.Visible = false;
+            }
+        }
+
+        private void training_mode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (training_mode.Checked == true)
+            {
+                SelectTimeLabel.Visible = false;
+                panel4.Visible = false;
+                panel3.Visible = true;
+                ChooseNumberOnMainForm.Visible = true;
+            }
         }
     }
 }

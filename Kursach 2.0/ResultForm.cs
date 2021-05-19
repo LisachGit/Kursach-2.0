@@ -19,21 +19,27 @@ namespace Kursach_2._0
             elapsedTimeLabel.Parent = pictureBox3;
             MarkLabel.Parent = pictureBox3;
             ResultScoreLabel.Parent = pictureBox3;
+            persentage.Parent = pictureBox3;
         }
-        public double scoreoonResultForm, numerOnResultForm, persent;
+        public double scoreoonResultForm, numerOnResultForm, persent, iongame;
         public int gamemodenumber, elspasedTimeMinutes, elapsedTimeSeconds;
+        public string based = "Ваш уровень знания устного счёта: ", low = "Низкий",middlelow = "Ниже среднего",middle = "Средний", highmiddle = "Выше среднего",high = "Высокий";
 
         private void ResultForm_Shown(object sender, EventArgs e)
         {
-            persent = (scoreoonResultForm / numerOnResultForm) * 100;
-            ResultScoreLabel.Text = "Вы ответили на " + string.Format("{0:0.00}", Convert.ToString(persent)) + "% правильно!";
-            if (persent <= 20) MarkLabel.Text = "Ваш уровень знания устного счёта: Низкий";
-            else if (persent > 20 && persent <= 40) MarkLabel.Text = "Ваш уровень знания устного счёта: Ниже среднего";
-            else if (persent > 40 && persent <= 60) MarkLabel.Text = "Ваш уровень знания устного счёта: Средний";
-            else if (persent > 60 && persent <= 80) MarkLabel.Text = "Ваш уровень знания устного счёта: Выше среднего";
-            else if (persent > 80) MarkLabel.Text = "Ваш уровень знания устного счёта: Высокий";
+            if (gamemodenumber == 2)
+            {
+                persent = (scoreoonResultForm / numerOnResultForm) * 100;
+                ResultScoreLabel.Text = "Вы ответили на " + string.Format("{0:0.00}", Convert.ToString(persent)) + "% правильно!";
+                Analyze();
+            }
             if (gamemodenumber == 1)
             {
+                persentage.Visible = false;
+                ResultScoreLabel.Text = "Количество решённых примеров: " + iongame;
+                persentage.Text = "Из них верно отвеченных: " + scoreoonResultForm;
+                persent = (scoreoonResultForm / iongame) * 100;
+                Analyze();
                 elapsedTimeLabel.Visible = true;
                 elapsedTimeLabel.Text = "Затраченное время: " + elspasedTimeMinutes + " минут " + elapsedTimeSeconds + " секунд.";
             }
@@ -41,6 +47,15 @@ namespace Kursach_2._0
         }
 
         Point lastPoint;
+
+        private void Analyze()
+        {
+            if (persent <= 20) MarkLabel.Text = based + low;
+            else if (persent > 20 && persent <= 40) MarkLabel.Text = based + middlelow;
+            else if (persent > 40 && persent <= 60) MarkLabel.Text = based + middle;
+            else if (persent > 60 && persent <= 80) MarkLabel.Text = based + highmiddle;
+            else if (persent > 80) MarkLabel.Text = based + high;
+        }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {

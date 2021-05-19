@@ -17,8 +17,8 @@ namespace Kursach_2._0
         Random rndongameform = new Random();
         Point lastPoint;
         public string answer, answerbox;
-        public int numer, lvl, gamemode, point, score = 0, time, example, operation,timerstart = 0, m = 0, s = 0;
-        public bool prost;
+        public int numer, lvl, gamemode, point, score = 0, time, example, operation, timerstart = 0, m = 0, s = 0, timevalue; // timevalue: 1 - 30 секунд, 2 - 1 минута, 3 - 2 минуты, 4 - 5 минут
+        public bool prost, timelimiter = true;
 
         private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
         {
@@ -51,7 +51,9 @@ namespace Kursach_2._0
         private void AnswerButtonOnGameForm_Click(object sender, EventArgs e)
         {
             answerbox = AnswerBoxOnGameForm.Text;
-            GameProcesslvl1num10training();
+            if (gamemode == 1)
+                GameProcesslvl1num10time();
+            else if (gamemode == 2) GameProcesslvl1num10training();
         }
 
         private void AnswerBoxOnGameForm_KeyDown(object sender, KeyEventArgs e)
@@ -59,7 +61,9 @@ namespace Kursach_2._0
             if (e.KeyCode == Keys.Enter)
             {
                 answerbox = AnswerBoxOnGameForm.Text;
-                GameProcesslvl1num10training();
+                if (gamemode == 1)
+                    GameProcesslvl1num10time();
+                else if (gamemode == 2) GameProcesslvl1num10training();
 
             }
         }
@@ -114,7 +118,7 @@ namespace Kursach_2._0
                     TimeCountMinutesLabelOnGameForm.Text = "00";
                 }
             }
-            
+
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -189,90 +193,179 @@ namespace Kursach_2._0
             AnswerLabelNameOnGameForm.Parent = pictureBox3;
         }
 
-        
+
+
+        public void Lvl1()
+        {
+            schetchikOnGameForm.Text = ("Номер примера - " + i);
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+            x1 = rndongameform.Next(10, 20);
+            y1 = rndongameform.Next(1, 10);
+            operation = rndongameform.Next(2); // 1 это плюс, 0 это минус
+            num1labelOnGameForm.Text = Convert.ToString(x1);
+            num2labelOnGameForm.Text = Convert.ToString(y1);
+            if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-";
+        }
+
+        public void Lvl2()
+        {
+            schetchikOnGameForm.Text = ("Номер примера - " + i);
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+            operation = rndongameform.Next(3); // 1 это плюс, 0 это минус, 2 это умножить
+            if (operation == 2)
+            {
+                x1 = rndongameform.Next(1, 10);
+                y1 = rndongameform.Next(2, 10);
+            }
+            else if (operation == 1)
+            {
+                x1 = rndongameform.Next(5, 50);
+                y1 = rndongameform.Next(5, 30);
+            }
+            else if (operation == 0)
+            {
+                x1 = rndongameform.Next(21, 50);
+                y1 = rndongameform.Next(5, 20);
+            }
+            num1labelOnGameForm.Text = Convert.ToString(x1);
+            num2labelOnGameForm.Text = Convert.ToString(y1);
+            if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-"; else if (operation == 2) operationlabelOnGameForm.Text = "*";
+        }
+
+        public void Lvl3()
+        {
+            schetchikOnGameForm.Text = ("Номер примера - " + i);
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+            operation = rndongameform.Next(4); // 1 это плюс, 0 это минус, 2 это умножить, 3 это деление
+            if (operation == 2)
+            {
+                x1 = rndongameform.Next(2, 20);
+                y1 = rndongameform.Next(5, 30);
+            }
+            else if (operation == 3)
+            {
+                del();
+            }
+            else if (operation == 1)
+            {
+                x1 = rndongameform.Next(50, 200);
+                y1 = rndongameform.Next(30, 49);
+            }
+            else if (operation == 0)
+            {
+                x1 = rndongameform.Next(50, 200);
+                y1 = rndongameform.Next(20, 49);
+            }
+            num1labelOnGameForm.Text = Convert.ToString(x1);
+            num2labelOnGameForm.Text = Convert.ToString(y1);
+            if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-"; else if (operation == 2) operationlabelOnGameForm.Text = "*"; else if (operation == 3) operationlabelOnGameForm.Text = "/";
+        }
+
+        public void del()
+        {
+            do
+            {
+                x1 = rndongameform.Next(10, 400);
+                for (int i = 2; i <= x1 / 2; i++)
+                {
+                    if (x1 % i == 0)
+                    {
+                        prost = false;
+                        break;
+                    }
+                }
+            } while (prost);
+            do
+            {
+                y1 = rndongameform.Next(2, 399);
+            }
+            while (x1 % y1 != 0 && x1 != y1);
+            if (x1 == y1) del();
+        }
+
+        public void Plus()
+        {
+            z = x1 + y1;
+            answer = Convert.ToString(z);
+
+            if (answerbox == answer)
+            {
+                point = 1;
+            }
+            else point = 0;
+            score = score + point;
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+            AnswerBoxOnGameForm.Text = "";
+            i++;
+            schetchikOnGameForm.Text = ("Номер примера - " + i);
+        }
+
+        public void Minus()
+        {
+            z = x1 - y1;
+            answer = Convert.ToString(z);
+
+            if (answerbox == answer)
+            {
+                point = 1;
+            }
+            else point = 0;
+            score = score + point;
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+            AnswerBoxOnGameForm.Text = "";
+            i++;
+            schetchikOnGameForm.Text = ("Номер примера - " + i);
+        }
+
+        public void Power()
+        {
+            z = x1 * y1;
+            answer = Convert.ToString(z);
+
+            if (answerbox == answer)
+            {
+                point = 1;
+            }
+            else point = 0;
+            score = score + point;
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+            AnswerBoxOnGameForm.Text = "";
+            i++;
+            schetchikOnGameForm.Text = ("Номер примера - " + i);
+        }
+
+        public void Divide()
+        {
+            z = x1 / y1;
+            answer = Convert.ToString(z);
+            if (answerbox == answer)
+            {
+                point = 1;
+            }
+            else point = 0;
+            score = score + point;
+            ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
+            AnswerBoxOnGameForm.Text = "";
+            i++;
+            schetchikOnGameForm.Text = ("Номер примера - " + i);
+        }
 
         public void conditionwritetrainingmode()
         {
             if (lvl == 1)
             {
-                schetchikOnGameForm.Text = ("Номер примера - " + i);
-                ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                x1 = rndongameform.Next(10, 20);
-                y1 = rndongameform.Next(1, 10);
-                operation = rndongameform.Next(2); // 1 это плюс, 0 это минус
-                num1labelOnGameForm.Text = Convert.ToString(x1);
-                num2labelOnGameForm.Text = Convert.ToString(y1);
-                if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-";
+                Lvl1();
             }
             else if (lvl == 2)
             {
-                schetchikOnGameForm.Text = ("Номер примера - " + i);
-                ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                operation = rndongameform.Next(3); // 1 это плюс, 0 это минус, 2 это умножить
-                if (operation == 2)
-                {
-                    x1 = rndongameform.Next(1, 10);
-                    y1 = rndongameform.Next(2, 10);
-                }
-                else if (operation == 1)
-                {
-                    x1 = rndongameform.Next(5, 50);
-                    y1 = rndongameform.Next(5, 30);
-                }
-                else if (operation == 0)
-                {
-                    x1 = rndongameform.Next(21, 50);
-                    y1 = rndongameform.Next(5, 20);
-                }
-                num1labelOnGameForm.Text = Convert.ToString(x1);
-                num2labelOnGameForm.Text = Convert.ToString(y1);
-                if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-"; else if (operation == 2) operationlabelOnGameForm.Text = "*";
+                Lvl2();
             }
             else if (lvl == 3)
             {
-                schetchikOnGameForm.Text = ("Номер примера - " + i);
-                ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                operation = rndongameform.Next(4); // 1 это плюс, 0 это минус, 2 это умножить, 3 это деление
-                if (operation == 2)
-                {
-                    x1 = rndongameform.Next(2, 20);
-                    y1 = rndongameform.Next(5, 30);
-                }
-                else if (operation == 3)
-                {
-                    do
-                    {
-                        x1 = rndongameform.Next(10, 400);
-                        for (int i = 2; i <= x1 / 2; i++)
-                        {
-                            if (x1 % i == 0)
-                            {
-                                prost = false;
-                                break;
-                            }
-                        }
-                    } while (prost);
-                        do
-                        {
-                            y1 = rndongameform.Next(2, 399);
-                        }
-                        while (x1 % y1 != 0);
-                }
-                else if (operation == 1)
-                {
-                    x1 = rndongameform.Next(50, 200);
-                    y1 = rndongameform.Next(30, 49);
-                }
-                else if (operation == 0)
-                {
-                    x1 = rndongameform.Next(50, 200);
-                    y1 = rndongameform.Next(20, 49);
-                }
-                num1labelOnGameForm.Text = Convert.ToString(x1);
-                num2labelOnGameForm.Text = Convert.ToString(y1);
-                if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-"; else if (operation == 2) operationlabelOnGameForm.Text = "*"; else if (operation == 3) operationlabelOnGameForm.Text = "/";
+                Lvl3();
             }
         }
+
 
 
         public void conditionwritetimemode()
@@ -280,86 +373,21 @@ namespace Kursach_2._0
             timer1.Enabled = true;
             if (lvl == 1)
             {
-                schetchikOnGameForm.Text = ("Номер примера - " + i);
-                ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                x1 = rndongameform.Next(10, 20);
-                y1 = rndongameform.Next(1, 10);
-                operation = rndongameform.Next(2); // 1 это плюс, 0 это минус
-                num1labelOnGameForm.Text = Convert.ToString(x1);
-                num2labelOnGameForm.Text = Convert.ToString(y1);
-                if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-";
+                Lvl1();
             }
             else if (lvl == 2)
             {
-                schetchikOnGameForm.Text = ("Номер примера - " + i);
-                ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                operation = rndongameform.Next(3); // 1 это плюс, 0 это минус, 2 это умножить
-                if (operation == 2)
-                {
-                    x1 = rndongameform.Next(1, 10);
-                    y1 = rndongameform.Next(2, 10);
-                }
-                else if (operation == 1)
-                {
-                    x1 = rndongameform.Next(5, 50);
-                    y1 = rndongameform.Next(5, 30);
-                }
-                else if (operation == 0)
-                {
-                    x1 = rndongameform.Next(21, 50);
-                    y1 = rndongameform.Next(5, 20);
-                }
-                num1labelOnGameForm.Text = Convert.ToString(x1);
-                num2labelOnGameForm.Text = Convert.ToString(y1);
-                if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-"; else if (operation == 2) operationlabelOnGameForm.Text = "*";
+                Lvl2();
             }
             else if (lvl == 3)
             {
-                schetchikOnGameForm.Text = ("Номер примера - " + i);
-                ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                operation = rndongameform.Next(4); // 1 это плюс, 0 это минус, 2 это умножить, 3 это деление
-                if (operation == 2)
-                {
-                    x1 = rndongameform.Next(2, 20);
-                    y1 = rndongameform.Next(5, 30);
-                }
-                else if (operation == 3)
-                {
-                    
-                        do
-                        {
-                            x1 = rndongameform.Next(10, 400);
-                            for (int i = 2; i <= x1 / 2; i++)
-                            {
-                                if (x1 % i == 0)
-                                {
-                                    prost = false;
-                                    break;
-                                }
-                            }
-                        } while (prost);
-                        do
-                        {
-                            y1 = rndongameform.Next(2, 399);
-                        }
-                        while ((x1 % y1 != 0) && (x1 != y1) );
-                        
-                }
-                else if (operation == 1)
-                {
-                    x1 = rndongameform.Next(50, 200);
-                    y1 = rndongameform.Next(30, 49);
-                }
-                else if (operation == 0)
-                {
-                    x1 = rndongameform.Next(50, 200);
-                    y1 = rndongameform.Next(20, 49);
-                }
-                num1labelOnGameForm.Text = Convert.ToString(x1);
-                num2labelOnGameForm.Text = Convert.ToString(y1);
-                if (operation == 1) operationlabelOnGameForm.Text = "+"; else if (operation == 0) operationlabelOnGameForm.Text = "-"; else if (operation == 2) operationlabelOnGameForm.Text = "*"; else if (operation == 3) operationlabelOnGameForm.Text = "/";
+                Lvl3();
             }
-        
+            if (timevalue == 1 && s >= 30) timelimiter = false;
+            else if (timevalue == 2 && m >= 1) timelimiter = false;
+            else if (timevalue == 3 && m >= 2) timelimiter = false;
+            else if (timevalue == 4 && m >= 5) timelimiter = false;
+
         }
 
         public void GameProcesslvl1num10training()
@@ -374,74 +402,23 @@ namespace Kursach_2._0
 
                     if (operation == 1)
                     {
-                        z = x1 + y1;
-                        answer = Convert.ToString(z);
-
-                        if (answerbox == answer)
-                        {
-                            point = 1;
-                        }
-                        else point = 0;
-                        score = score + point;
-                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                        AnswerBoxOnGameForm.Text = "";
-                        i++;
-
-                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        Plus();
                         conditionwritetrainingmode();
                     }
                     else if (operation == 0)
                     {
 
-                        z = x1 - y1;
-                        answer = Convert.ToString(z);
-
-                        if (answerbox == answer)
-                        {
-                            point = 1;
-                        }
-                        else point = 0;
-                        score = score + point;
-                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                        AnswerBoxOnGameForm.Text = "";
-                        i++;
-
-                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        Minus();
                         conditionwritetrainingmode();
                     }
                     else if (operation == 2)
                     {
-                        z = x1 * y1;
-                        answer = Convert.ToString(z);
-
-                        if (answerbox == answer)
-                        {
-                            point = 1;
-                        }
-                        else point = 0;
-                        score = score + point;
-                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                        AnswerBoxOnGameForm.Text = "";
-                        i++;
-
-                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        Power();
                         conditionwritetrainingmode();
                     }
                     else if (operation == 3)
                     {
-                        z = x1 / y1;
-                        answer = Convert.ToString(z);
-                        if (answerbox == answer)
-                        {
-                            point = 1;
-                        }
-                        else point = 0;
-                        score = score + point;
-                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                        AnswerBoxOnGameForm.Text = "";
-                        i++;
-
-                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        Divide();
                         conditionwritetrainingmode();
                     }
                 }
@@ -475,91 +452,40 @@ namespace Kursach_2._0
 
                     if (operation == 1)
                     {
-                        z = x1 + y1;
-                        answer = Convert.ToString(z);
-
-                        if (answerbox == answer)
-                        {
-                            point = 1;
-                        }
-                        else point = 0;
-                        score = score + point;
-                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                        AnswerBoxOnGameForm.Text = "";
-                        i++;
-
-                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        Plus();
                         conditionwritetimemode();
                     }
                     else if (operation == 0)
                     {
 
-                        z = x1 - y1;
-                        answer = Convert.ToString(z);
-
-                        if (answerbox == answer)
-                        {
-                            point = 1;
-                        }
-                        else point = 0;
-                        score = score + point;
-                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                        AnswerBoxOnGameForm.Text = "";
-                        i++;
-
-                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        Minus();
                         conditionwritetimemode();
                     }
                     else if (operation == 2)
                     {
-                        z = x1 * y1;
-                        answer = Convert.ToString(z);
-
-                        if (answerbox == answer)
-                        {
-                            point = 1;
-                        }
-                        else point = 0;
-                        score = score + point;
-                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                        AnswerBoxOnGameForm.Text = "";
-                        i++;
-
-                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        Power();
                         conditionwritetimemode();
                     }
                     else if (operation == 3)
                     {
-                        z = x1 / y1;
-                        answer = Convert.ToString(z);
-
-                        if (answerbox == answer)
-                        {
-                            point = 1;
-                        }
-                        else point = 0;
-                        score = score + point;
-                        ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
-                        AnswerBoxOnGameForm.Text = "";
-                        i++;
-
-                        schetchikOnGameForm.Text = ("Номер примера - " + i);
+                        Divide();
                         conditionwritetimemode();
                     }
-                
+                if (timelimiter == false) break;
 
             } 
-            while (i > numer);
+            while (timelimiter == false);
             
-            if (i == numer)
+            if (timelimiter == false)
             {
                 timer1.Enabled = false;
-                MessageBox.Show("Игра окончена!");
+                MessageBox.Show("Время вышло!");
                 resultFormOnGameForm.elapsedTimeSeconds = s;
                 resultFormOnGameForm.elspasedTimeMinutes = m;
                 resultFormOnGameForm.scoreoonResultForm = score;
                 resultFormOnGameForm.numerOnResultForm = numer;
                 resultFormOnGameForm.gamemodenumber = gamemode;
+                resultFormOnGameForm.iongame = i;
                 
                 resultFormOnGameForm.Show();
                 this.Close();

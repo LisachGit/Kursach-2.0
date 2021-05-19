@@ -54,12 +54,19 @@ namespace Kursach_2._0
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.AboutLvlsLabel = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.SelectTimeLabel = new System.Windows.Forms.Label();
+            this.sec30button = new System.Windows.Forms.RadioButton();
+            this.minute1button = new System.Windows.Forms.RadioButton();
+            this.minute2button = new System.Windows.Forms.RadioButton();
+            this.minute5button = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // WelcomeLabelOnMainForm
@@ -109,6 +116,7 @@ namespace Kursach_2._0
             this.ChooseNumberOnMainForm.Size = new System.Drawing.Size(270, 28);
             this.ChooseNumberOnMainForm.TabIndex = 19;
             this.ChooseNumberOnMainForm.Text = "Введите количество примеров";
+            this.ChooseNumberOnMainForm.Visible = false;
             // 
             // lvl1
             // 
@@ -161,6 +169,7 @@ namespace Kursach_2._0
             this.training_mode.TabStop = true;
             this.training_mode.Text = "Тренировка";
             this.training_mode.UseVisualStyleBackColor = true;
+            this.training_mode.CheckedChanged += new System.EventHandler(this.training_mode_CheckedChanged);
             // 
             // time_mode
             // 
@@ -174,6 +183,7 @@ namespace Kursach_2._0
             this.time_mode.TabStop = true;
             this.time_mode.Text = "На время";
             this.time_mode.UseVisualStyleBackColor = true;
+            this.time_mode.CheckedChanged += new System.EventHandler(this.time_mode_CheckedChanged);
             // 
             // num30
             // 
@@ -328,6 +338,7 @@ namespace Kursach_2._0
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 29;
+            this.panel3.Visible = false;
             // 
             // AboutLvlsLabel
             // 
@@ -344,11 +355,90 @@ namespace Kursach_2._0
             this.AboutLvlsLabel.MouseLeave += new System.EventHandler(this.AboutLvlsLabel_MouseLeave);
             this.AboutLvlsLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AboutLvlsLabel_MouseMove);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.minute5button);
+            this.panel4.Controls.Add(this.minute2button);
+            this.panel4.Controls.Add(this.minute1button);
+            this.panel4.Controls.Add(this.sec30button);
+            this.panel4.Location = new System.Drawing.Point(602, 117);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 109);
+            this.panel4.TabIndex = 31;
+            this.panel4.Visible = false;
+            // 
+            // SelectTimeLabel
+            // 
+            this.SelectTimeLabel.AutoSize = true;
+            this.SelectTimeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SelectTimeLabel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SelectTimeLabel.ForeColor = System.Drawing.Color.White;
+            this.SelectTimeLabel.Location = new System.Drawing.Point(588, 90);
+            this.SelectTimeLabel.Name = "SelectTimeLabel";
+            this.SelectTimeLabel.Size = new System.Drawing.Size(214, 28);
+            this.SelectTimeLabel.TabIndex = 32;
+            this.SelectTimeLabel.Text = "Выберите время сессии:";
+            this.SelectTimeLabel.Visible = false;
+            // 
+            // sec30button
+            // 
+            this.sec30button.AutoSize = true;
+            this.sec30button.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sec30button.ForeColor = System.Drawing.Color.White;
+            this.sec30button.Location = new System.Drawing.Point(3, 11);
+            this.sec30button.Name = "sec30button";
+            this.sec30button.Size = new System.Drawing.Size(76, 20);
+            this.sec30button.TabIndex = 0;
+            this.sec30button.TabStop = true;
+            this.sec30button.Text = "30 секунд";
+            this.sec30button.UseVisualStyleBackColor = true;
+            // 
+            // minute1button
+            // 
+            this.minute1button.AutoSize = true;
+            this.minute1button.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minute1button.ForeColor = System.Drawing.Color.White;
+            this.minute1button.Location = new System.Drawing.Point(3, 37);
+            this.minute1button.Name = "minute1button";
+            this.minute1button.Size = new System.Drawing.Size(70, 20);
+            this.minute1button.TabIndex = 1;
+            this.minute1button.TabStop = true;
+            this.minute1button.Text = "1 минута";
+            this.minute1button.UseVisualStyleBackColor = true;
+            // 
+            // minute2button
+            // 
+            this.minute2button.AutoSize = true;
+            this.minute2button.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minute2button.ForeColor = System.Drawing.Color.White;
+            this.minute2button.Location = new System.Drawing.Point(3, 63);
+            this.minute2button.Name = "minute2button";
+            this.minute2button.Size = new System.Drawing.Size(74, 20);
+            this.minute2button.TabIndex = 2;
+            this.minute2button.TabStop = true;
+            this.minute2button.Text = "2 минуты";
+            this.minute2button.UseVisualStyleBackColor = true;
+            // 
+            // minute5button
+            // 
+            this.minute5button.AutoSize = true;
+            this.minute5button.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minute5button.ForeColor = System.Drawing.Color.White;
+            this.minute5button.Location = new System.Drawing.Point(3, 86);
+            this.minute5button.Name = "minute5button";
+            this.minute5button.Size = new System.Drawing.Size(65, 20);
+            this.minute5button.TabIndex = 3;
+            this.minute5button.TabStop = true;
+            this.minute5button.Text = "5 минут";
+            this.minute5button.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SelectTimeLabel);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.AboutLvlsLabel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -377,6 +467,8 @@ namespace Kursach_2._0
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,5 +499,11 @@ namespace Kursach_2._0
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label AboutLvlsLabel;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.RadioButton minute5button;
+        private System.Windows.Forms.RadioButton minute2button;
+        private System.Windows.Forms.RadioButton minute1button;
+        private System.Windows.Forms.RadioButton sec30button;
+        private System.Windows.Forms.Label SelectTimeLabel;
     }
 }
