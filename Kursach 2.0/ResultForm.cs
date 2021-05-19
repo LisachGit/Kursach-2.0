@@ -20,8 +20,9 @@ namespace Kursach_2._0
             MarkLabel.Parent = pictureBox3;
             ResultScoreLabel.Parent = pictureBox3;
             persentage.Parent = pictureBox3;
+            marklabelonresult.Parent = pictureBox3;
         }
-        public double scoreoonResultForm, numerOnResultForm, persent, iongame;
+        public double scoreoonResultForm, numerOnResultForm, persent, iongame, mark;
         public int gamemodenumber, elspasedTimeMinutes, elapsedTimeSeconds;
         public string based = "Ваш уровень знания устного счёта: ", low = "Низкий",middlelow = "Ниже среднего",middle = "Средний", highmiddle = "Выше среднего",high = "Высокий";
 
@@ -29,17 +30,22 @@ namespace Kursach_2._0
         {
             if (gamemodenumber == 2)
             {
+                persentage.Visible = false;
+                elapsedTimeLabel.Visible = false;
                 persent = (scoreoonResultForm / numerOnResultForm) * 100;
                 ResultScoreLabel.Text = "Вы ответили на " + string.Format("{0:0.00}", Convert.ToString(persent)) + "% правильно!";
+                mark = Math.Round(persent/10, 0);
+                marklabelonresult.Text = "Рекомендуемая оценка: " + mark;
                 Analyze();
             }
             if (gamemodenumber == 1)
             {
-                persentage.Visible = false;
                 ResultScoreLabel.Text = "Количество решённых примеров: " + iongame;
                 persentage.Text = "Из них верно отвеченных: " + scoreoonResultForm;
                 persent = (scoreoonResultForm / iongame) * 100;
+                mark = Math.Round(persent/10,0);
                 Analyze();
+                marklabelonresult.Text = "Рекомендуемая оценка: " + mark;
                 elapsedTimeLabel.Visible = true;
                 elapsedTimeLabel.Text = "Затраченное время: " + elspasedTimeMinutes + " минут " + elapsedTimeSeconds + " секунд.";
             }

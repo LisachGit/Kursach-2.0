@@ -39,6 +39,7 @@ namespace Kursach_2._0
             this.MarkLabel = new System.Windows.Forms.Label();
             this.elapsedTimeLabel = new System.Windows.Forms.Label();
             this.persentage = new System.Windows.Forms.Label();
+            this.marklabelonresult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -114,7 +115,7 @@ namespace Kursach_2._0
             this.ResultScoreLabel.BackColor = System.Drawing.Color.Transparent;
             this.ResultScoreLabel.Font = new System.Drawing.Font("Book Antiqua", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultScoreLabel.ForeColor = System.Drawing.Color.White;
-            this.ResultScoreLabel.Location = new System.Drawing.Point(40, 123);
+            this.ResultScoreLabel.Location = new System.Drawing.Point(40, 73);
             this.ResultScoreLabel.Name = "ResultScoreLabel";
             this.ResultScoreLabel.Size = new System.Drawing.Size(128, 42);
             this.ResultScoreLabel.TabIndex = 21;
@@ -137,7 +138,7 @@ namespace Kursach_2._0
             this.MarkLabel.BackColor = System.Drawing.Color.Transparent;
             this.MarkLabel.Font = new System.Drawing.Font("Book Antiqua", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MarkLabel.ForeColor = System.Drawing.Color.White;
-            this.MarkLabel.Location = new System.Drawing.Point(40, 226);
+            this.MarkLabel.Location = new System.Drawing.Point(40, 176);
             this.MarkLabel.Name = "MarkLabel";
             this.MarkLabel.Size = new System.Drawing.Size(92, 32);
             this.MarkLabel.TabIndex = 24;
@@ -149,7 +150,7 @@ namespace Kursach_2._0
             this.elapsedTimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.elapsedTimeLabel.Font = new System.Drawing.Font("Book Antiqua", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.elapsedTimeLabel.ForeColor = System.Drawing.Color.White;
-            this.elapsedTimeLabel.Location = new System.Drawing.Point(40, 280);
+            this.elapsedTimeLabel.Location = new System.Drawing.Point(40, 230);
             this.elapsedTimeLabel.Name = "elapsedTimeLabel";
             this.elapsedTimeLabel.Size = new System.Drawing.Size(92, 32);
             this.elapsedTimeLabel.TabIndex = 25;
@@ -162,17 +163,30 @@ namespace Kursach_2._0
             this.persentage.BackColor = System.Drawing.Color.Transparent;
             this.persentage.Font = new System.Drawing.Font("Book Antiqua", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.persentage.ForeColor = System.Drawing.Color.White;
-            this.persentage.Location = new System.Drawing.Point(226, 178);
+            this.persentage.Location = new System.Drawing.Point(226, 128);
             this.persentage.Name = "persentage";
             this.persentage.Size = new System.Drawing.Size(89, 29);
             this.persentage.TabIndex = 26;
             this.persentage.Text = "текст";
+            // 
+            // marklabelonresult
+            // 
+            this.marklabelonresult.AutoSize = true;
+            this.marklabelonresult.BackColor = System.Drawing.Color.Transparent;
+            this.marklabelonresult.Font = new System.Drawing.Font("Book Antiqua", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.marklabelonresult.ForeColor = System.Drawing.Color.White;
+            this.marklabelonresult.Location = new System.Drawing.Point(41, 275);
+            this.marklabelonresult.Name = "marklabelonresult";
+            this.marklabelonresult.Size = new System.Drawing.Size(89, 29);
+            this.marklabelonresult.TabIndex = 27;
+            this.marklabelonresult.Text = "текст";
             // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.marklabelonresult);
             this.Controls.Add(this.persentage);
             this.Controls.Add(this.EndGameLabelOnResultLabel);
             this.Controls.Add(this.elapsedTimeLabel);
@@ -208,5 +222,6 @@ namespace Kursach_2._0
         private System.Windows.Forms.Label MarkLabel;
         private System.Windows.Forms.Label elapsedTimeLabel;
         private System.Windows.Forms.Label persentage;
+        private System.Windows.Forms.Label marklabelonresult;
     }
 }
