@@ -52,8 +52,8 @@ namespace Kursach_2._0
         {
             answerbox = AnswerBoxOnGameForm.Text;
             if (gamemode == 1)
-                GameProcesslvl1num10time();
-            else if (gamemode == 2) GameProcesslvl1num10training();
+                GameProcesstime();
+            else if (gamemode == 2) GameProcesstraining();
         }
 
         private void AnswerBoxOnGameForm_KeyDown(object sender, KeyEventArgs e)
@@ -62,8 +62,8 @@ namespace Kursach_2._0
             {
                 answerbox = AnswerBoxOnGameForm.Text;
                 if (gamemode == 1)
-                    GameProcesslvl1num10time();
-                else if (gamemode == 2) GameProcesslvl1num10training();
+                    GameProcesstime();
+                else if (gamemode == 2) GameProcesstraining();
 
             }
         }
@@ -130,6 +130,20 @@ namespace Kursach_2._0
             }
         }
 
+        private void Activating()
+        {
+            ScoreNameLabelOnGameForm.Visible = true;
+            ScoreCountLabelOnGameForm.Visible = true;
+            schetchikOnGameForm.Visible = true;
+            num1labelOnGameForm.Visible = true;
+            num2labelOnGameForm.Visible = true;
+            operationlabelOnGameForm.Visible = true;
+            AnswerLabelNameOnGameForm.Visible = true;
+            AnswerBoxOnGameForm.Visible = true;
+            AnswerButtonOnGameForm.Visible = true;
+            StartTheActionButtonOnGameForm.Visible = false;
+        }
+        
         private void StartTheActionButtonOnGameForm_Click(object sender, EventArgs e)
         {
             TimeCountMinutesLabelOnGameForm.Text = "00";
@@ -137,35 +151,17 @@ namespace Kursach_2._0
             if (gamemode == 2)
             {
                 conditionwritetrainingmode();
-                ScoreNameLabelOnGameForm.Visible = true;
-                ScoreCountLabelOnGameForm.Visible = true;
-                schetchikOnGameForm.Visible = true;
-                num1labelOnGameForm.Visible = true;
-                num2labelOnGameForm.Visible = true;
-                operationlabelOnGameForm.Visible = true;
-                AnswerLabelNameOnGameForm.Visible = true;
-                AnswerBoxOnGameForm.Visible = true;
-                AnswerButtonOnGameForm.Visible = true;
+                Activating();
                 TimeCountMinutesLabelOnGameForm.Visible = false;
                 TimeCountSecondsLabelOnGameForm.Visible = false;
                 TimeLabelOnMainForm.Visible = false;
-                StartTheActionButtonOnGameForm.Visible = false;
             } else if (gamemode == 1)
             {
                 conditionwritetimemode();
-                ScoreNameLabelOnGameForm.Visible = true;
-                ScoreCountLabelOnGameForm.Visible = true;
-                schetchikOnGameForm.Visible = true;
-                num1labelOnGameForm.Visible = true;
-                num2labelOnGameForm.Visible = true;
-                operationlabelOnGameForm.Visible = true;
-                AnswerLabelNameOnGameForm.Visible = true;
-                AnswerBoxOnGameForm.Visible = true;
-                AnswerButtonOnGameForm.Visible = true;
+                Activating();
                 TimeCountMinutesLabelOnGameForm.Visible = true;
                 TimeCountSecondsLabelOnGameForm.Visible = true;
                 TimeLabelOnMainForm.Visible = true;
-                StartTheActionButtonOnGameForm.Visible = false;
             }
         }
         private void GoBackButtonOnGameForm_Click(object sender, EventArgs e)
@@ -350,6 +346,14 @@ namespace Kursach_2._0
             schetchikOnGameForm.Text = ("Номер примера - " + i);
         }
 
+        private void TimerCheck()
+        {
+            if (timevalue == 1 && s >= 30) timelimiter = false;
+            else if (timevalue == 2 && m >= 1) timelimiter = false;
+            else if (timevalue == 3 && m >= 2) timelimiter = false;
+            else if (timevalue == 4 && m >= 5) timelimiter = false;
+        }
+
         public void conditionwritetrainingmode()
         {
             if (lvl == 1)
@@ -383,14 +387,10 @@ namespace Kursach_2._0
             {
                 Lvl3();
             }
-            if (timevalue == 1 && s >= 30) timelimiter = false;
-            else if (timevalue == 2 && m >= 1) timelimiter = false;
-            else if (timevalue == 3 && m >= 2) timelimiter = false;
-            else if (timevalue == 4 && m >= 5) timelimiter = false;
-
+            TimerCheck();
         }
 
-        public void GameProcesslvl1num10training()
+        public void GameProcesstraining()
         {
             ResultForm resultFormOnGameForm = new ResultForm();
             ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
@@ -439,7 +439,7 @@ namespace Kursach_2._0
             }
         }
 
-        public void GameProcesslvl1num10time()
+        public void GameProcesstime()
         {
             ResultForm resultFormOnGameForm = new ResultForm();
             ScoreCountLabelOnGameForm.Text = Convert.ToString(score);
